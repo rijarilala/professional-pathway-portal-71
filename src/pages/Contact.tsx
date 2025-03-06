@@ -96,7 +96,7 @@ const Contact = () => {
                 
                 <div className="rounded-xl overflow-hidden h-80 shadow-md">
                   <iframe 
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.142047342344!2d2.2952556163440213!3d48.87065100762738!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66fc4f8f3049b%3A0xcbb47907ba56de50!2sAv.%20des%20Champs-%C3%89lys%C3%A9es%2C%2075008%20Paris%2C%20France!5e0!3m2!1sen!2sus!4v1653395335835!5m2!1sen!2sus" 
+                    src="https://www.google.com/maps/embed?pb=!1m21!1m12!1m3!1d429.10654408498664!2d48.230839623752026!3d-18.950970242475105!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m6!3e6!4m0!4m3!3m2!1d-18.950748994971885!2d48.23115250967815!5e1!3m2!1sfr!2smg!4v1741287253971!5m2!1sfr!2smg" 
                     width="100%" 
                     height="100%" 
                     style={{ border: 0 }} 
@@ -104,7 +104,7 @@ const Contact = () => {
                     loading="lazy"
                     title="Notre localisation"
                   ></iframe>
-                </div>
+                           </div>
               </div>
               
               <div>
