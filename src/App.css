@@ -16,7 +16,7 @@
   filter: drop-shadow(0 0 2em #8b5d33aa);
 }
 .logo.react:hover {
-  filter: drop-shadow(0 0 2em #8b5d33aa);
+  filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
 @keyframes logo-spin {
@@ -46,10 +46,13 @@
   box-shadow: 0 4px 12px rgba(139, 93, 51, 0.15);
 }
 
-.brown-gradient-bg {
-  background: linear-gradient(135deg, #8b5d33 0%, #6d4827 100%);
+.brown-blue-gradient-bg {
+  background: linear-gradient(135deg, #8b5d33 0%, #1e90ff 100%);
 }
 
-.brown-accent {
+.brown-blue-accent {
   color: #8b5d33;
+  background: linear-gradient(135deg, #8b5d33 0%, #1e90ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
