@@ -31,7 +31,7 @@ const About = () => {
                   ce potentiel.
                 </p>
                 <p className="text-lg text-muted-foreground">
-                  Fondée en 2015 par une équipe de consultants expérimentés, notre cabinet 
+                  Fondée en 2025 par une équipe de consultants expérimentés, notre cabinet 
                   s'est développé autour de valeurs fortes : excellence, écoute, innovation et 
                   engagement envers nos clients.
                 </p>

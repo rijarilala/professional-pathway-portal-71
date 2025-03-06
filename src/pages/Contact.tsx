@@ -49,8 +49,8 @@ const Contact = () => {
                     <div>
                       <h3 className="font-medium mb-1">Adresse</h3>
                       <p className="text-muted-foreground">
-                        123 Avenue des Champs-Élysées<br />
-                        75008 Paris, France
+                       Lot G100Bis Moramanga Ambony<br />
+                        Moramanga 514, Madagascar
                       </p>
                     </div>
                   </div>
@@ -62,7 +62,7 @@ const Contact = () => {
                     <div>
                       <h3 className="font-medium mb-1">Téléphone</h3>
                       <p className="text-muted-foreground">
-                        +33 1 23 45 67 89
+                        +261 34 60 874 37
                       </p>
                     </div>
                   </div>
@@ -74,7 +74,7 @@ const Contact = () => {
                     <div>
                       <h3 className="font-medium mb-1">Email</h3>
                       <p className="text-muted-foreground">
-                        contact@conseilpro.fr
+                        contact@conseilpro.mg
                       </p>
                     </div>
                   </div>
