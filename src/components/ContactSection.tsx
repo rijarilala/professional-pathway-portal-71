@@ -40,17 +40,17 @@ const ContactSection = () => {
     {
       icon: <Phone size={20} className="text-primary" />,
       title: "Téléphone",
-      details: "+33 1 23 45 67 89",
+      details: "+26134 60 874 37",
     },
     {
       icon: <Mail size={20} className="text-primary" />,
       title: "Email",
-      details: "contact@conseilpro.fr",
+      details: "contact@conseilpro.mg",
     },
     {
       icon: <MapPin size={20} className="text-primary" />,
       title: "Adresse",
-      details: "123 Avenue des Champs-Élysées, 75008 Paris",
+      details: "Lot G100Bis Moramanga Ambony Moramanga 514, Madagascar",
     },
     {
       icon: <Clock size={20} className="text-primary" />,
