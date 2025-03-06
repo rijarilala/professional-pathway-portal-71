@@ -104,6 +104,13 @@ const Contact = () => {
                     loading="lazy"
                     title="Notre localisation"
                   ></iframe>
+                  <iframe 
+                  src="https://www.google.com/maps/embed?pb=!1m21!1m12!1m3!1d429.10654408498664!2d48.230839623752026!3d-18.950970242475105!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m6!3e6!4m0!4m3!3m2!1d-18.950748994971885!2d48.23115250967815!5e1!3m2!1sfr!2smg!4v1741287253971!5m2!1sfr!2smg" 
+                  width="800" 
+                  height="600"  style={{ border: 0 }}  
+                  allowFullScreen 
+                  loading="lazy" 
+                  ></iframe>
                            </div>
               </div>
               
