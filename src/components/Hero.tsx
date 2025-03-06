@@ -13,22 +13,22 @@ const Hero = () => {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center px-6 pt-20 overflow-hidden">
-      <div className="absolute inset-0 -z-10 bg-gradient-to-b from-blue-50 to-white"></div>
+      <div className="absolute inset-0 -z-10 bg-gradient-to-b from-blue-100 to-white"></div>
       <div className="absolute inset-0 -z-10 opacity-20">
-        <div className="absolute top-0 left-0 right-0 h-[500px] bg-[radial-gradient(circle_500px_at_50%_200px,rgba(120,119,198,0.3),transparent)]"></div>
+        <div className="absolute top-0 left-0 right-0 h-[500px] bg-[radial-gradient(circle_500px_at_50%_200px,rgba(30,144,255,0.3),transparent)]"></div>
       </div>
 
       <div className="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 py-12">
         <div className="flex flex-col justify-center">
           <div className={cn("space-y-6", isVisible ? "animate-fadeIn" : "opacity-0")}>
-            <div className="inline-flex items-center rounded-full px-3 py-1 text-sm bg-primary/10 text-primary font-medium">
-              <span className="animate-pulse mr-1.5 h-2 w-2 rounded-full bg-primary"></span>
+            <div className="inline-flex items-center rounded-full px-3 py-1 text-sm bg-blue-100 text-blue-800 font-medium">
+              <span className="animate-pulse mr-1.5 h-2 w-2 rounded-full bg-blue"></span>
               Cabinet de Conseil Professionnel
             </div>
             
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
               Façonnez l'avenir de votre
-              <span className="text-primary"> carrière </span>
+              <span className="bg-gradient-to-r from-brown to-blue bg-clip-text text-transparent"> carrière </span>
               avec expertise
             </h1>
             
@@ -37,11 +37,11 @@ const Hero = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
-              <Button className="bg-primary hover:bg-primary/90 text-white rounded-md h-12 px-6 text-base shadow-md hover:shadow-lg transition-all">
+              <Button className="bg-brown hover:bg-brown/90 text-white rounded-md h-12 px-6 text-base shadow-md hover:shadow-lg transition-all">
                 Découvrir nos services
                 <ArrowRight size={18} className="ml-2" />
               </Button>
-              <Button variant="outline" className="h-12 px-6 text-base border-primary text-primary hover:bg-primary/5">
+              <Button variant="outline" className="h-12 px-6 text-base border-blue text-blue hover:bg-blue/5">
                 Prendre rendez-vous
               </Button>
             </div>
@@ -49,7 +49,7 @@ const Hero = () => {
             <div className="flex items-center pt-8 space-x-4">
               <div className="flex -space-x-2">
                 {[1, 2, 3, 4].map((i) => (
-                  <div key={i} className="w-10 h-10 rounded-full border-2 border-white bg-primary flex items-center justify-center text-white text-xs font-bold">
+                  <div key={i} className="w-10 h-10 rounded-full border-2 border-white bg-gradient-to-br from-brown to-blue flex items-center justify-center text-white text-xs font-bold">
                     {String.fromCharCode(64 + i)}
                   </div>
                 ))}
@@ -81,7 +81,7 @@ const Hero = () => {
                 <h3 className="text-xl font-bold mt-1">Un accompagnement personnalisé et bienveillant</h3>
               </div>
             </div>
-            <div className="absolute -top-4 -left-4 w-24 h-24 bg-primary/20 rounded-full blur-2xl"></div>
+            <div className="absolute -top-4 -left-4 w-24 h-24 bg-brown/20 rounded-full blur-2xl"></div>
             <div className="absolute -bottom-8 -right-8 w-40 h-40 bg-blue-400/20 rounded-full blur-3xl"></div>
           </div>
         </div>

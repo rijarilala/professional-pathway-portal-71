@@ -36,7 +36,7 @@ const Header = () => {
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <Link to="/" className="flex items-center space-x-2">
-          <span className="text-2xl font-bold bg-gradient-to-r from-brown to-brown-dark bg-clip-text text-transparent">
+          <span className="text-2xl font-bold brown-blue-accent">
             ConseilPro
           </span>
         </Link>
@@ -47,12 +47,12 @@ const Header = () => {
             <Link
               key={link.name}
               to={link.path}
-              className="text-foreground/80 hover:text-brown font-medium transition-colors"
+              className="text-foreground/80 hover:text-blue font-medium transition-colors"
             >
               {link.name}
             </Link>
           ))}
-          <Button className="bg-brown hover:bg-brown/90 text-white rounded-md shadow-md hover:shadow-lg transition-all">
+          <Button className="bg-gradient-to-r from-brown to-blue hover:from-brown/90 hover:to-blue/90 text-white rounded-md shadow-md hover:shadow-lg transition-all">
             Prendre RDV
           </Button>
         </nav>
@@ -78,14 +78,14 @@ const Header = () => {
             <Link
               key={link.name}
               to={link.path}
-              className="text-foreground/80 hover:text-brown font-medium text-lg py-2 border-b border-gray-100"
+              className="text-foreground/80 hover:text-blue font-medium text-lg py-2 border-b border-gray-100"
               onClick={() => setMobileMenuOpen(false)}
             >
               {link.name}
             </Link>
           ))}
           <Button 
-            className="bg-brown hover:bg-brown/90 text-white w-full py-6 rounded-md shadow-md hover:shadow-lg transition-all mt-4"
+            className="bg-gradient-to-r from-brown to-blue hover:from-brown/90 hover:to-blue/90 text-white w-full py-6 rounded-md shadow-md hover:shadow-lg transition-all mt-4"
             onClick={() => setMobileMenuOpen(false)}
           >
             Prendre RDV

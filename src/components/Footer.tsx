@@ -31,12 +31,12 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-secondary/30 pt-16 pb-8 px-6 border-t border-border/30">
+    <footer className="bg-gradient-to-r from-brown/5 to-blue/5 pt-16 pb-8 px-6 border-t border-border/30">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
           <div>
             <Link to="/" className="inline-block mb-6">
-              <span className="text-2xl font-bold bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
+              <span className="text-2xl font-bold bg-gradient-to-r from-brown to-blue bg-clip-text text-transparent">
                 ConseilPro
               </span>
             </Link>
@@ -49,7 +49,7 @@ const Footer = () => {
                   key={index}
                   href={link.path}
                   aria-label={link.label}
-                  className="w-8 h-8 rounded-full bg-primary/10 hover:bg-primary/20 flex items-center justify-center text-primary transition-colors"
+                  className="w-8 h-8 rounded-full bg-gradient-to-r from-brown/10 to-blue/10 hover:from-brown/20 hover:to-blue/20 flex items-center justify-center text-blue transition-colors"
                 >
                   {link.icon}
                 </a>
@@ -58,13 +58,13 @@ const Footer = () => {
           </div>
           
           <div>
-            <h4 className="font-bold text-lg mb-6">Liens rapides</h4>
+            <h4 className="font-bold text-lg mb-6 text-brown">Liens rapides</h4>
             <ul className="space-y-3">
               {quickLinks.map((link, index) => (
                 <li key={index}>
                   <Link 
                     to={link.path} 
-                    className="text-muted-foreground hover:text-primary transition-colors"
+                    className="text-muted-foreground hover:text-blue transition-colors"
                   >
                     {link.name}
                   </Link>
@@ -74,13 +74,13 @@ const Footer = () => {
           </div>
           
           <div>
-            <h4 className="font-bold text-lg mb-6">Nos services</h4>
+            <h4 className="font-bold text-lg mb-6 text-blue">Nos services</h4>
             <ul className="space-y-3">
               {services.map((service, index) => (
                 <li key={index}>
                   <Link 
                     to={service.path} 
-                    className="text-muted-foreground hover:text-primary transition-colors"
+                    className="text-muted-foreground hover:text-brown transition-colors"
                   >
                     {service.name}
                   </Link>
@@ -90,12 +90,12 @@ const Footer = () => {
           </div>
           
           <div>
-            <h4 className="font-bold text-lg mb-6">Contact</h4>
+            <h4 className="font-bold text-lg mb-6 bg-gradient-to-r from-brown to-blue bg-clip-text text-transparent">Contact</h4>
             <address className="not-italic space-y-3 text-muted-foreground">
               <p>123 Avenue des Champs-Élysées</p>
               <p>75008 Paris, France</p>
-              <p className="hover:text-primary">+33 1 23 45 67 89</p>
-              <p className="hover:text-primary">contact@conseilpro.fr</p>
+              <p className="hover:text-blue">+33 1 23 45 67 89</p>
+              <p className="hover:text-brown">contact@conseilpro.fr</p>
             </address>
           </div>
         </div>
@@ -103,8 +103,8 @@ const Footer = () => {
         <div className="pt-8 border-t border-border/30 flex flex-col sm:flex-row justify-between items-center text-sm text-muted-foreground">
           <p>&copy; {currentYear} ConseilPro. Tous droits réservés.</p>
           <div className="flex space-x-6 mt-4 sm:mt-0">
-            <Link to="/privacy" className="hover:text-primary">Politique de confidentialité</Link>
-            <Link to="/terms" className="hover:text-primary">Conditions d'utilisation</Link>
+            <Link to="/privacy" className="hover:text-brown">Politique de confidentialité</Link>
+            <Link to="/terms" className="hover:text-blue">Conditions d'utilisation</Link>
           </div>
         </div>
       </div>
