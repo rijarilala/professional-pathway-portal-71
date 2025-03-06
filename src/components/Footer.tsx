@@ -92,10 +92,10 @@ const Footer = () => {
           <div>
             <h4 className="font-bold text-lg mb-6 bg-gradient-to-r from-brown to-blue bg-clip-text text-transparent">Contact</h4>
             <address className="not-italic space-y-3 text-muted-foreground">
-              <p>123 Avenue des Champs-Élysées</p>
-              <p>75008 Paris, France</p>
-              <p className="hover:text-blue">+33 1 23 45 67 89</p>
-              <p className="hover:text-brown">contact@conseilpro.fr</p>
+            Lot G100Bis Moramanga Ambony<br />
+            Moramanga 514, Madagascar
+              <p className="hover:text-blue">+261 34 60 874 37</p>
+              <p className="hover:text-brown">contact@conseilpro.mg</p>
             </address>
           </div>
         </div>
