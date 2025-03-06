@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -29,13 +30,13 @@ const Header = () => {
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-4 px-6 md:px-10",
         isScrolled
-          ? "bg-white/90 backdrop-blur-md shadow-sm"
+          ? "bg-white/90 backdrop-blur-md shadow-sm border-b border-brown/20"
           : "bg-transparent"
       )}
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <Link to="/" className="flex items-center space-x-2">
-          <span className="text-2xl font-bold bg-gradient-to-r from-primary to-primary-foreground bg-clip-text text-transparent">
+          <span className="text-2xl font-bold bg-gradient-to-r from-brown to-brown-dark bg-clip-text text-transparent">
             ConseilPro
           </span>
         </Link>
@@ -46,12 +47,12 @@ const Header = () => {
             <Link
               key={link.name}
               to={link.path}
-              className="text-foreground/80 hover:text-primary font-medium transition-colors"
+              className="text-foreground/80 hover:text-brown font-medium transition-colors"
             >
               {link.name}
             </Link>
           ))}
-          <Button className="bg-primary hover:bg-primary/90 text-white rounded-md shadow-md hover:shadow-lg transition-all">
+          <Button className="bg-brown hover:bg-brown/90 text-white rounded-md shadow-md hover:shadow-lg transition-all">
             Prendre RDV
           </Button>
         </nav>
@@ -77,14 +78,14 @@ const Header = () => {
             <Link
               key={link.name}
               to={link.path}
-              className="text-foreground/80 hover:text-primary font-medium text-lg py-2 border-b border-gray-100"
+              className="text-foreground/80 hover:text-brown font-medium text-lg py-2 border-b border-gray-100"
               onClick={() => setMobileMenuOpen(false)}
             >
               {link.name}
             </Link>
           ))}
           <Button 
-            className="bg-primary hover:bg-primary/90 text-white w-full py-6 rounded-md shadow-md hover:shadow-lg transition-all mt-4"
+            className="bg-brown hover:bg-brown/90 text-white w-full py-6 rounded-md shadow-md hover:shadow-lg transition-all mt-4"
             onClick={() => setMobileMenuOpen(false)}
           >
             Prendre RDV
