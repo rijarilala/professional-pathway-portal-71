@@ -6,13 +6,13 @@ import { cn } from "@/lib/utils";
 const services = [
   {
     icon: <Briefcase className="h-10 w-10 text-primary" />,
-    title: "Conseil et Orientation",
+    title: "Conseil et Orientation Professionnelle",
     description: "Accompagnement personnalisé pour identifier vos compétences et définir votre projet professionnel.",
     features: ["Bilan de compétences", "Tests d'orientation", "Analyse de marché", "Plan d'action personnalisé"],
   },
   {
     icon: <Award className="h-10 w-10 text-primary" />,
-    title: "Coaching Professionnel",
+    title: "Coaching ",
     description: "Développez votre potentiel et atteignez vos objectifs grâce à un coaching sur mesure.",
     features: ["Développement personnel", "Leadership", "Préparation aux entretiens", "Gestion de carrière"],
   },
