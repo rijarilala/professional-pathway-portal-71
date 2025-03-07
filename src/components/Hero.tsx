@@ -4,7 +4,7 @@ import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { useTranslation } from "react-i18next";
-import image from './assets/collaboration.jpg';
+import image from './asset/collaboration.jpg';
 
 
 
