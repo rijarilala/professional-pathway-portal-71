@@ -4,9 +4,6 @@ import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { useTranslation } from "react-i18next";
-import image from './assets/collaboration.jpg';
-
-
 
 const Hero = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -84,7 +81,7 @@ const Hero = () => {
           <div className="relative w-full max-w-md">
             <div className="glass-card relative z-10 overflow-hidden rounded-2xl p-8">
               <img 
-                src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80" 
+                src="/lovable-uploads/fedfb190-2d9d-40f4-b5a2-4aac71d52364.png" 
                 alt="Professional meeting" 
                 className="w-full h-auto rounded-xl object-cover"
               />
