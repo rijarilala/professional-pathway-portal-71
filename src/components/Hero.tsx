@@ -4,6 +4,9 @@ import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { useTranslation } from "react-i18next";
+import image from './assets/collaboration.jpg';
+
+
 
 const Hero = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -80,9 +83,7 @@ const Hero = () => {
         <div className={cn("relative flex items-center justify-center", isVisible ? "animate-slideUp" : "opacity-0")}>
           <div className="relative w-full max-w-md">
             <div className="glass-card relative z-10 overflow-hidden rounded-2xl p-8">
-              <img 
-                src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80" 
-                alt="Professional meeting" 
+            <img src={image} alt="Description de l'image" 
                 className="w-full h-auto rounded-xl object-cover"
               />
               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6 text-white">
