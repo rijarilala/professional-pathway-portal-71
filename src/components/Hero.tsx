@@ -4,7 +4,7 @@ import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { useTranslation } from "react-i18next";
-import image from './assets/collaboration.jpg';
+import image from './asset/collaboration.jpg';
 
 
 
@@ -83,7 +83,7 @@ const Hero = () => {
         <div className={cn("relative flex items-center justify-center", isVisible ? "animate-slideUp" : "opacity-0")}>
           <div className="relative w-full max-w-md">
             <div className="glass-card relative z-10 overflow-hidden rounded-2xl p-8">
-              
+
                <img src={image}
                 alt="Professional meeting" 
                 className="w-full h-auto rounded-xl object-cover"
