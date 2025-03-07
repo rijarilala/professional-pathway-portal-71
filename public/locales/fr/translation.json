@@ -1,0 +1,173 @@
+
+{
+  "common": {
+    "selectLanguage": "Sélectionner la langue",
+    "appointment": "Prendre RDV",
+    "learnMore": "En savoir plus",
+    "readMore": "Lire plus",
+    "subscribe": "S'abonner",
+    "send": "Envoyer",
+    "submit": "Soumettre",
+    "confirm": "Confirmer",
+    "cancel": "Annuler",
+    "all": "Tout",
+    "loading": "Chargement...",
+    "error": "Erreur"
+  },
+  "navigation": {
+    "home": "Accueil",
+    "services": "Services",
+    "about": "À propos",
+    "blog": "Blog",
+    "contact": "Contact"
+  },
+  "home": {
+    "hero": {
+      "title": "Façonnez l'avenir de votre carrière avec expertise",
+      "description": "Nous vous accompagnons dans votre développement professionnel, de l'orientation au recrutement, en passant par la formation et l'immigration.",
+      "cta": "Découvrir nos services",
+      "secondaryCta": "Prendre rendez-vous",
+      "clientCount": "+450 professionnels accompagnés",
+      "approachTitle": "Notre approche",
+      "approachDesc": "Un accompagnement personnalisé et bienveillant",
+      "badge": "Cabinet de Conseil Professionnel"
+    },
+    "services": {
+      "title": "Nos Services Professionnels",
+      "description": "Découvrez notre gamme complète de services conçus pour accompagner votre réussite professionnelle à chaque étape."
+    },
+    "testimonials": {
+      "title": "Ce qu'en disent nos clients",
+      "description": "Découvrez les témoignages de professionnels et d'entreprises qui ont fait confiance à notre expertise."
+    }
+  },
+  "contact": {
+    "title": "Contactez-nous",
+    "description": "Vous avez une question ou souhaitez prendre rendez-vous ? N'hésitez pas à nous contacter.",
+    "formTitle": "Envoyez-nous un message",
+    "name": "Nom complet",
+    "email": "Email",
+    "subject": "Sujet",
+    "message": "Message",
+    "infoTitle": "Nos coordonnées",
+    "infoDescription": "N'hésitez pas à nous contacter pour toute information ou pour prendre rendez-vous. Notre équipe est à votre disposition pour répondre à vos questions.",
+    "appointmentTitle": "Prenez rendez-vous en ligne",
+    "appointmentDescription": "Réservez directement un créneau pour une consultation avec l'un de nos experts.",
+    "appointmentCta": "Réserver maintenant",
+    "sendingMessage": "Envoi en cours...",
+    "sendMessage": "Envoyer le message",
+    "messageSent": "Message envoyé !",
+    "messageConfirmation": "Nous vous contacterons dans les plus brefs délais.",
+    "phone": "Téléphone",
+    "address": "Adresse",
+    "hours": "Horaires"
+  },
+  "about": {
+    "title": "À Propos de Nous",
+    "description": "Découvrez notre histoire, nos valeurs et notre vision pour vous accompagner vers la réussite",
+    "mission": {
+      "title": "Notre Mission",
+      "description1": "Chez ConseilPro, notre mission est d'accompagner chaque individu et organisation dans l'atteinte de leurs objectifs professionnels. Nous croyons fermement au potentiel humain et à l'importance d'un accompagnement personnalisé pour révéler ce potentiel.",
+      "description2": "Fondée en 2025 par une équipe de consultants expérimentés, notre cabinet s'est développé autour de valeurs fortes : excellence, écoute, innovation et engagement envers nos clients."
+    },
+    "values": {
+      "title": "Nos Valeurs",
+      "excellence": {
+        "title": "Excellence",
+        "description": "Nous visons l'excellence dans chacune de nos interventions, avec un souci constant de la qualité et de la pertinence."
+      },
+      "listening": {
+        "title": "Écoute",
+        "description": "Nous plaçons l'écoute au cœur de notre démarche pour comprendre parfaitement vos besoins et y répondre avec précision."
+      },
+      "innovation": {
+        "title": "Innovation",
+        "description": "Nous développons constamment de nouvelles approches et méthodes pour rester à la pointe des pratiques professionnelles."
+      },
+      "commitment": {
+        "title": "Engagement",
+        "description": "Nous nous engageons pleinement dans la réussite de vos projets, avec une implication totale à chaque étape."
+      }
+    },
+    "team": {
+      "title": "Notre Équipe"
+    }
+  },
+  "services": {
+    "title": "Nos Services",
+    "description": "Découvrez notre gamme complète de services professionnels adaptés à vos besoins",
+    "counseling": {
+      "title": "Conseil et Orientation Professionnelle",
+      "description": "Accompagnement personnalisé pour identifier vos compétences et définir votre projet professionnel.",
+      "features": [
+        "Bilan de compétences",
+        "Tests d'orientation",
+        "Analyse de marché",
+        "Plan d'action personnalisé"
+      ]
+    },
+    "coaching": {
+      "title": "Coaching",
+      "description": "Développez votre potentiel et atteignez vos objectifs grâce à un coaching sur mesure.",
+      "features": [
+        "Développement personnel",
+        "Leadership",
+        "Préparation aux entretiens",
+        "Gestion de carrière"
+      ]
+    },
+    "training": {
+      "title": "Formation",
+      "description": "Des formations adaptées aux besoins des professionnels et des entreprises.",
+      "features": [
+        "Soft skills",
+        "Management",
+        "Communication",
+        "Marketing digital"
+      ]
+    },
+    "recruitment": {
+      "title": "Recrutement",
+      "description": "Solution complète pour les entreprises et les candidats en recherche d'emploi.",
+      "features": [
+        "Analyse de poste",
+        "Recherche de candidats",
+        "Évaluation",
+        "Intégration"
+      ]
+    },
+    "immigration": {
+      "title": "Immigration",
+      "description": "Accompagnement dans vos démarches d'immigration professionnelle.",
+      "features": [
+        "Analyse d'éligibilité",
+        "Préparation du dossier",
+        "Suivi des procédures",
+        "Intégration locale"
+      ]
+    }
+  },
+  "footer": {
+    "quickLinks": "Liens rapides",
+    "ourServices": "Nos services",
+    "contact": "Contact",
+    "rights": "Tous droits réservés.",
+    "privacy": "Politique de confidentialité",
+    "terms": "Conditions d'utilisation"
+  },
+  "notFound": {
+    "title": "Page non trouvée",
+    "description": "La page que vous recherchez n'existe pas ou a été déplacée.",
+    "button": "Retour à l'accueil"
+  },
+  "booking": {
+    "title": "Réserver un rendez-vous",
+    "service": "Service souhaité",
+    "dateTime": "Date et heure",
+    "fullName": "Nom complet",
+    "phone": "Téléphone",
+    "confirm": "Confirmer le rendez-vous",
+    "success": "Rendez-vous confirmé !",
+    "confirmation": "Votre rendez-vous pour {service} le {date} a été confirmé."
+  }
+}

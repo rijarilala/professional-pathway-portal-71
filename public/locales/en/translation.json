@@ -1,0 +1,173 @@
+
+{
+  "common": {
+    "selectLanguage": "Select language",
+    "appointment": "Book Appointment",
+    "learnMore": "Learn more",
+    "readMore": "Read more",
+    "subscribe": "Subscribe",
+    "send": "Send",
+    "submit": "Submit",
+    "confirm": "Confirm",
+    "cancel": "Cancel",
+    "all": "All",
+    "loading": "Loading...",
+    "error": "Error"
+  },
+  "navigation": {
+    "home": "Home",
+    "services": "Services",
+    "about": "About",
+    "blog": "Blog",
+    "contact": "Contact"
+  },
+  "home": {
+    "hero": {
+      "title": "Shape the future of your career with expertise",
+      "description": "We support you in your professional development, from guidance to recruitment, through training and immigration.",
+      "cta": "Discover our services",
+      "secondaryCta": "Book an appointment",
+      "clientCount": "+450 professionals assisted",
+      "approachTitle": "Our approach",
+      "approachDesc": "Personalized and caring support",
+      "badge": "Professional Consulting Firm"
+    },
+    "services": {
+      "title": "Our Professional Services",
+      "description": "Discover our complete range of services designed to support your professional success at every step."
+    },
+    "testimonials": {
+      "title": "What our clients say",
+      "description": "Discover testimonials from professionals and companies who have trusted our expertise."
+    }
+  },
+  "contact": {
+    "title": "Contact Us",
+    "description": "Do you have a question or would you like to make an appointment? Don't hesitate to contact us.",
+    "formTitle": "Send us a message",
+    "name": "Full name",
+    "email": "Email",
+    "subject": "Subject",
+    "message": "Message",
+    "infoTitle": "Our contact details",
+    "infoDescription": "Don't hesitate to contact us for any information or to make an appointment. Our team is at your disposal to answer your questions.",
+    "appointmentTitle": "Book an appointment online",
+    "appointmentDescription": "Directly reserve a slot for a consultation with one of our experts.",
+    "appointmentCta": "Book now",
+    "sendingMessage": "Sending...",
+    "sendMessage": "Send message",
+    "messageSent": "Message sent!",
+    "messageConfirmation": "We will contact you as soon as possible.",
+    "phone": "Phone",
+    "address": "Address",
+    "hours": "Opening Hours"
+  },
+  "about": {
+    "title": "About Us",
+    "description": "Discover our history, our values and our vision to guide you towards success",
+    "mission": {
+      "title": "Our Mission",
+      "description1": "At ConseilPro, our mission is to accompany each individual and organization in achieving their professional goals. We firmly believe in human potential and the importance of personalized support to reveal this potential.",
+      "description2": "Founded in 2025 by a team of experienced consultants, our firm has developed around strong values: excellence, listening, innovation and commitment to our clients."
+    },
+    "values": {
+      "title": "Our Values",
+      "excellence": {
+        "title": "Excellence",
+        "description": "We aim for excellence in each of our interventions, with a constant concern for quality and relevance."
+      },
+      "listening": {
+        "title": "Listening",
+        "description": "We place listening at the heart of our approach to perfectly understand your needs and respond to them with precision."
+      },
+      "innovation": {
+        "title": "Innovation",
+        "description": "We constantly develop new approaches and methods to stay at the forefront of professional practices."
+      },
+      "commitment": {
+        "title": "Commitment",
+        "description": "We are fully committed to the success of your projects, with total involvement at every stage."
+      }
+    },
+    "team": {
+      "title": "Our Team"
+    }
+  },
+  "services": {
+    "title": "Our Services",
+    "description": "Discover our complete range of professional services tailored to your needs",
+    "counseling": {
+      "title": "Professional Counseling and Guidance",
+      "description": "Personalized support to identify your skills and define your professional project.",
+      "features": [
+        "Skills assessment",
+        "Career guidance tests",
+        "Market analysis",
+        "Personalized action plan"
+      ]
+    },
+    "coaching": {
+      "title": "Coaching",
+      "description": "Develop your potential and achieve your goals through customized coaching.",
+      "features": [
+        "Personal development",
+        "Leadership",
+        "Interview preparation",
+        "Career management"
+      ]
+    },
+    "training": {
+      "title": "Training",
+      "description": "Training courses adapted to the needs of professionals and companies.",
+      "features": [
+        "Soft skills",
+        "Management",
+        "Communication",
+        "Digital marketing"
+      ]
+    },
+    "recruitment": {
+      "title": "Recruitment",
+      "description": "Complete solution for companies and job seekers.",
+      "features": [
+        "Job analysis",
+        "Candidate search",
+        "Assessment",
+        "Integration"
+      ]
+    },
+    "immigration": {
+      "title": "Immigration",
+      "description": "Support in your professional immigration procedures.",
+      "features": [
+        "Eligibility analysis",
+        "File preparation",
+        "Procedure monitoring",
+        "Local integration"
+      ]
+    }
+  },
+  "footer": {
+    "quickLinks": "Quick Links",
+    "ourServices": "Our Services",
+    "contact": "Contact",
+    "rights": "All rights reserved.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Use"
+  },
+  "notFound": {
+    "title": "Page not found",
+    "description": "The page you are looking for does not exist or has been moved.",
+    "button": "Back to home"
+  },
+  "booking": {
+    "title": "Book an appointment",
+    "service": "Desired service",
+    "dateTime": "Date and time",
+    "fullName": "Full name",
+    "phone": "Phone",
+    "confirm": "Confirm appointment",
+    "success": "Appointment confirmed!",
+    "confirmation": "Your appointment for {service} on {date} has been confirmed."
+  }
+}

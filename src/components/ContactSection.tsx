@@ -5,9 +5,11 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 const ContactSection = () => {
   const { toast } = useToast();
+  const { t } = useTranslation();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -28,8 +30,8 @@ const ContactSection = () => {
     // Simulate form submission
     setTimeout(() => {
       toast({
-        title: "Message envoyé !",
-        description: "Nous vous contacterons dans les plus brefs délais.",
+        title: t("contact.messageSent"),
+        description: t("contact.messageConfirmation"),
       });
       setFormData({ name: "", email: "", subject: "", message: "" });
       setIsSubmitting(false);
@@ -39,22 +41,22 @@ const ContactSection = () => {
   const contactInfo = [
     {
       icon: <Phone size={20} className="text-primary" />,
-      title: "Téléphone",
+      title: t("contact.phone"),
       details: "+26134 60 874 37",
     },
     {
       icon: <Mail size={20} className="text-primary" />,
-      title: "Email",
+      title: t("common.email"),
       details: "contact@conseilpro.mg",
     },
     {
       icon: <MapPin size={20} className="text-primary" />,
-      title: "Adresse",
+      title: t("contact.address"),
       details: "Lot G100Bis Moramanga Ambony Moramanga 514, Madagascar",
     },
     {
       icon: <Clock size={20} className="text-primary" />,
-      title: "Horaires",
+      title: t("contact.hours"),
       details: "Lun - Ven: 9h - 18h",
     },
   ];
@@ -67,27 +69,27 @@ const ContactSection = () => {
       
       <div className="max-w-7xl mx-auto">
         <div className="text-center max-w-2xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">Contactez-nous</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">{t("contact.title")}</h2>
           <p className="text-lg text-muted-foreground">
-            Vous avez une question ou souhaitez prendre rendez-vous ? N'hésitez pas à nous contacter.
+            {t("contact.description")}
           </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           <div className="glass-card p-8 md:p-10 rounded-2xl">
-            <h3 className="text-2xl font-bold mb-6">Envoyez-nous un message</h3>
+            <h3 className="text-2xl font-bold mb-6">{t("contact.formTitle")}</h3>
             
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="space-y-2">
                   <label htmlFor="name" className="text-sm font-medium">
-                    Nom complet <span className="text-red-500">*</span>
+                    {t("contact.name")} <span className="text-red-500">*</span>
                   </label>
                   <Input
                     id="name"
                     name="name"
                     type="text"
-                    placeholder="Votre nom"
+                    placeholder={t("contact.name")}
                     value={formData.name}
                     onChange={handleChange}
                     required
@@ -97,7 +99,7 @@ const ContactSection = () => {
                 
                 <div className="space-y-2">
                   <label htmlFor="email" className="text-sm font-medium">
-                    Email <span className="text-red-500">*</span>
+                    {t("common.email")} <span className="text-red-500">*</span>
                   </label>
                   <Input
                     id="email"
@@ -114,13 +116,13 @@ const ContactSection = () => {
               
               <div className="space-y-2">
                 <label htmlFor="subject" className="text-sm font-medium">
-                  Sujet <span className="text-red-500">*</span>
+                  {t("contact.subject")} <span className="text-red-500">*</span>
                 </label>
                 <Input
                   id="subject"
                   name="subject"
                   type="text"
-                  placeholder="Objet de votre message"
+                  placeholder={t("contact.subject")}
                   value={formData.subject}
                   onChange={handleChange}
                   required
@@ -130,12 +132,12 @@ const ContactSection = () => {
               
               <div className="space-y-2">
                 <label htmlFor="message" className="text-sm font-medium">
-                  Message <span className="text-red-500">*</span>
+                  {t("contact.message")} <span className="text-red-500">*</span>
                 </label>
                 <Textarea
                   id="message"
                   name="message"
-                  placeholder="Votre message..."
+                  placeholder={t("contact.message")}
                   value={formData.message}
                   onChange={handleChange}
                   required
@@ -148,16 +150,16 @@ const ContactSection = () => {
                 className="w-full h-12 bg-primary hover:bg-primary/90 text-white"
                 disabled={isSubmitting}
               >
-                {isSubmitting ? "Envoi en cours..." : "Envoyer le message"}
+                {isSubmitting ? t("contact.sendingMessage") : t("contact.sendMessage")}
               </Button>
             </form>
           </div>
           
           <div className="flex flex-col justify-between">
             <div>
-              <h3 className="text-2xl font-bold mb-6">Nos coordonnées</h3>
+              <h3 className="text-2xl font-bold mb-6">{t("contact.infoTitle")}</h3>
               <p className="text-muted-foreground mb-8">
-                N'hésitez pas à nous contacter pour toute information ou pour prendre rendez-vous. Notre équipe est à votre disposition pour répondre à vos questions.
+                {t("contact.infoDescription")}
               </p>
               
               <div className="space-y-6">
@@ -176,12 +178,12 @@ const ContactSection = () => {
             </div>
             
             <div className="glass-card p-6 rounded-xl mt-8 lg:mt-0">
-              <h4 className="font-bold mb-3">Prenez rendez-vous en ligne</h4>
+              <h4 className="font-bold mb-3">{t("contact.appointmentTitle")}</h4>
               <p className="text-sm text-muted-foreground mb-4">
-                Réservez directement un créneau pour une consultation avec l'un de nos experts.
+                {t("contact.appointmentDescription")}
               </p>
               <Button className="w-full bg-primary hover:bg-primary/90 text-white">
-                Réserver maintenant
+                {t("contact.appointmentCta")}
               </Button>
             </div>
           </div>

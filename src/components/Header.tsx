@@ -4,10 +4,13 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { useTranslation } from "react-i18next";
+import LanguageSwitcher from "./LanguageSwitcher";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const { t } = useTranslation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -18,11 +21,11 @@ const Header = () => {
   }, []);
 
   const navLinks = [
-    { name: "Accueil", path: "/" },
-    { name: "Services", path: "/services" },
-    { name: "À propos", path: "/about" },
-    { name: "Blog", path: "/blog" },
-    { name: "Contact", path: "/contact" },
+    { name: t("navigation.home"), path: "/" },
+    { name: t("navigation.services"), path: "/services" },
+    { name: t("navigation.about"), path: "/about" },
+    { name: t("navigation.blog"), path: "/blog" },
+    { name: t("navigation.contact"), path: "/contact" },
   ];
 
   return (
@@ -52,18 +55,22 @@ const Header = () => {
               {link.name}
             </Link>
           ))}
+          <LanguageSwitcher />
           <Button className="bg-gradient-to-r from-brown to-blue hover:from-brown/90 hover:to-blue/90 text-white rounded-md shadow-md hover:shadow-lg transition-all">
-            Prendre RDV
+            {t("common.appointment")}
           </Button>
         </nav>
 
         {/* Mobile Menu Button */}
-        <button
-          className="md:hidden text-foreground"
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-        >
-          {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
+        <div className="md:hidden flex items-center gap-4">
+          <LanguageSwitcher />
+          <button
+            className="text-foreground"
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          >
+            {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile Navigation */}
@@ -88,7 +95,7 @@ const Header = () => {
             className="bg-gradient-to-r from-brown to-blue hover:from-brown/90 hover:to-blue/90 text-white w-full py-6 rounded-md shadow-md hover:shadow-lg transition-all mt-4"
             onClick={() => setMobileMenuOpen(false)}
           >
-            Prendre RDV
+            {t("common.appointment")}
           </Button>
         </nav>
       </div>
