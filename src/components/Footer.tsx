@@ -42,9 +42,12 @@ const Footer = () => {
                 ConseilPro
               </span>
             </Link>
+            {/*
             <p className="text-muted-foreground mb-6">
               Cabinet de conseil spécialisé en orientation professionnelle, coaching, formation, recrutement et immigration.
-            </p>
+            </p>*/ }
+            <h4 className="font-bold text-lg mb-6 text-brown">{t("footer.about")}</h4>
+
             <div className="flex space-x-4">
               {socialLinks.map((link, index) => (
                 <a
