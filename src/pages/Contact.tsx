@@ -6,16 +6,18 @@ import BookingButton from "@/components/BookingButton";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
+import { useTranslation } from "react-i18next";
 
 const Contact = () => {
   const { toast } = useToast();
+  const { t } = useTranslation();
   
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     
     toast({
-      title: "Message envoyé !",
-      description: "Nous vous répondrons dans les plus brefs délais.",
+      title: t("contact.messageSent"),
+      description: t("contact.messageConfirmation"),
     });
     
     // Reset form
@@ -28,9 +30,9 @@ const Contact = () => {
       <main className="flex-grow">
         <div className="pt-24 pb-12 px-6 bg-secondary/30">
           <div className="max-w-7xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">Contactez-Nous</h1>
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">{t("contact.title")}</h1>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              Notre équipe est à votre écoute pour répondre à toutes vos questions
+              {t("contact.description")}
             </p>
           </div>
         </div>
@@ -39,7 +41,7 @@ const Contact = () => {
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
               <div>
-                <h2 className="text-2xl font-bold mb-6">Nos Coordonnées</h2>
+                <h2 className="text-2xl font-bold mb-6">{t("contact.infoTitle")}</h2>
                 
                 <div className="space-y-6 mb-8">
                   <div className="flex items-start">
@@ -47,7 +49,7 @@ const Contact = () => {
                       <MapPin className="h-6 w-6 text-primary" />
                     </div>
                     <div>
-                      <h3 className="font-medium mb-1">Adresse</h3>
+                      <h3 className="font-medium mb-1">{t("contact.address")}</h3>
                       <p className="text-muted-foreground">
                        Lot G100Bis Moramanga Ambony<br />
                         Moramanga 514, Madagascar
@@ -60,7 +62,7 @@ const Contact = () => {
                       <Phone className="h-6 w-6 text-primary" />
                     </div>
                     <div>
-                      <h3 className="font-medium mb-1">Téléphone</h3>
+                      <h3 className="font-medium mb-1">{t("contact.phone")}</h3>
                       <p className="text-muted-foreground">
                         +261 34 60 874 37
                       </p>
@@ -72,7 +74,7 @@ const Contact = () => {
                       <Mail className="h-6 w-6 text-primary" />
                     </div>
                     <div>
-                      <h3 className="font-medium mb-1">Email</h3>
+                      <h3 className="font-medium mb-1">{t("common.email")}</h3>
                       <p className="text-muted-foreground">
                         contact@conseilpro.mg
                       </p>
@@ -84,7 +86,7 @@ const Contact = () => {
                       <Clock className="h-6 w-6 text-primary" />
                     </div>
                     <div>
-                      <h3 className="font-medium mb-1">Horaires d'ouverture</h3>
+                      <h3 className="font-medium mb-1">{t("contact.hours")}</h3>
                       <p className="text-muted-foreground">
                         Lundi - Vendredi: 9h00 - 18h00<br />
                         Samedi: 10h00 - 15h00<br />
@@ -102,16 +104,16 @@ const Contact = () => {
                   allowFullScreen 
                   loading="lazy" 
                   ></iframe>
-                           </div>
+                </div>
               </div>
               
               <div>
-                <h2 className="text-2xl font-bold mb-6">Envoyez-nous un message</h2>
+                <h2 className="text-2xl font-bold mb-6">{t("contact.formTitle")}</h2>
                 <form onSubmit={handleSubmit} className="space-y-6 glass-card p-8 rounded-xl">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="space-y-2">
                       <label htmlFor="firstName" className="text-sm font-medium">
-                        Prénom
+                        {t("booking.fullName").split(" ")[0]}
                       </label>
                       <input
                         id="firstName"
@@ -124,7 +126,7 @@ const Contact = () => {
                     
                     <div className="space-y-2">
                       <label htmlFor="lastName" className="text-sm font-medium">
-                        Nom
+                        {t("booking.fullName").split(" ")[1] || "Nom"}
                       </label>
                       <input
                         id="lastName"
@@ -138,7 +140,7 @@ const Contact = () => {
                   
                   <div className="space-y-2">
                     <label htmlFor="email" className="text-sm font-medium">
-                      Email
+                      {t("common.email")}
                     </label>
                     <input
                       id="email"
@@ -151,7 +153,7 @@ const Contact = () => {
                   
                   <div className="space-y-2">
                     <label htmlFor="phone" className="text-sm font-medium">
-                      Téléphone
+                      {t("contact.phone")}
                     </label>
                     <input
                       id="phone"
@@ -163,7 +165,7 @@ const Contact = () => {
                   
                   <div className="space-y-2">
                     <label htmlFor="subject" className="text-sm font-medium">
-                      Sujet
+                      {t("contact.subject")}
                     </label>
                     <select
                       id="subject"
@@ -172,18 +174,18 @@ const Contact = () => {
                       className="w-full rounded-md border border-input bg-transparent px-3 py-2 text-sm shadow-sm"
                     >
                       <option value="">Sélectionner un sujet</option>
-                      <option value="orientation">Conseil et Orientation</option>
-                      <option value="coaching">Coaching Professionnel</option>
-                      <option value="formation">Formation</option>
-                      <option value="recruitment">Recrutement</option>
-                      <option value="immigration">Immigration</option>
-                      <option value="other">Autre</option>
+                      <option value="orientation">{t("services.counseling.title")}</option>
+                      <option value="coaching">{t("services.coaching.title")}</option>
+                      <option value="formation">{t("services.training.title")}</option>
+                      <option value="recruitment">{t("services.recruitment.title")}</option>
+                      <option value="immigration">{t("services.immigration.title")}</option>
+                      <option value="other">{t("common.all")}</option>
                     </select>
                   </div>
                   
                   <div className="space-y-2">
                     <label htmlFor="message" className="text-sm font-medium">
-                      Message
+                      {t("contact.message")}
                     </label>
                     <textarea
                       id="message"
@@ -195,7 +197,7 @@ const Contact = () => {
                   </div>
                   
                   <Button type="submit" className="w-full bg-primary hover:bg-primary/90 text-white">
-                    Envoyer
+                    {t("contact.sendMessage")}
                   </Button>
                 </form>
               </div>

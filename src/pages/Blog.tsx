@@ -6,6 +6,7 @@ import BookingButton from "@/components/BookingButton";
 import { ArrowRight, Calendar, User } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import { useTranslation } from "react-i18next";
 
 const blogPosts = [
   {
@@ -65,13 +66,15 @@ const blogPosts = [
 ];
 
 const Blog = () => {
+  const { t } = useTranslation();
+
   return (
     <div className="min-h-screen flex flex-col bg-background overflow-hidden">
       <Header />
       <main className="flex-grow">
         <div className="pt-24 pb-12 px-6 bg-secondary/30">
           <div className="max-w-7xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">Blog & Ressources</h1>
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">{t("navigation.blog")}</h1>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
               Des articles, conseils et ressources pour vous accompagner dans votre parcours professionnel
             </p>
@@ -107,7 +110,7 @@ const Blog = () => {
                     <h3 className="text-xl font-bold mb-3">{post.title}</h3>
                     <p className="text-muted-foreground mb-4">{post.excerpt}</p>
                     <Button variant="link" className="p-0 h-auto text-primary flex items-center">
-                      Lire l'article <ArrowRight className="ml-2 h-4 w-4" />
+                      {t("common.readMore")} <ArrowRight className="ml-2 h-4 w-4" />
                     </Button>
                   </div>
                 </div>
@@ -116,7 +119,7 @@ const Blog = () => {
             
             <div className="mt-16 text-center">
               <Button className="bg-primary hover:bg-primary/90 text-white rounded-md px-8 py-6 h-auto">
-                Voir plus d'articles
+                {t("common.all")}
               </Button>
             </div>
           </div>

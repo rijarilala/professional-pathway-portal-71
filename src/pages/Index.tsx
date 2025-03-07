@@ -7,8 +7,11 @@ import Testimonials from "@/components/Testimonials";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 import BookingButton from "@/components/BookingButton";
+import { useTranslation } from "react-i18next";
 
 const Index = () => {
+  const { t } = useTranslation();
+
   useEffect(() => {
     // Smooth scroll for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {

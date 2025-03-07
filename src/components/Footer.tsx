@@ -2,24 +2,26 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Instagram, Twitter, Linkedin, Facebook, Mail } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
+  const { t } = useTranslation();
 
   const quickLinks = [
-    { name: "Accueil", path: "/" },
-    { name: "Services", path: "/#services" },
-    { name: "À propos", path: "/#about" },
-    { name: "Blog", path: "/#blog" },
-    { name: "Contact", path: "/#contact" },
+    { nameKey: "navigation.home", path: "/" },
+    { nameKey: "navigation.services", path: "/#services" },
+    { nameKey: "navigation.about", path: "/#about" },
+    { nameKey: "navigation.blog", path: "/#blog" },
+    { nameKey: "navigation.contact", path: "/#contact" },
   ];
 
   const services = [
-    { name: "Conseil et Orientation", path: "/#services" },
-    { name: "Coaching Professionnel", path: "/#services" },
-    { name: "Formation", path: "/#services" },
-    { name: "Recrutement", path: "/#services" },
-    { name: "Immigration", path: "/#services" },
+    { nameKey: "services.counseling.title", path: "/#services" },
+    { nameKey: "services.coaching.title", path: "/#services" },
+    { nameKey: "services.training.title", path: "/#services" },
+    { nameKey: "services.recruitment.title", path: "/#services" },
+    { nameKey: "services.immigration.title", path: "/#services" },
   ];
 
   const socialLinks = [
@@ -58,7 +60,7 @@ const Footer = () => {
           </div>
           
           <div>
-            <h4 className="font-bold text-lg mb-6 text-brown">Liens rapides</h4>
+            <h4 className="font-bold text-lg mb-6 text-brown">{t("footer.quickLinks")}</h4>
             <ul className="space-y-3">
               {quickLinks.map((link, index) => (
                 <li key={index}>
@@ -66,7 +68,7 @@ const Footer = () => {
                     to={link.path} 
                     className="text-muted-foreground hover:text-blue transition-colors"
                   >
-                    {link.name}
+                    {t(link.nameKey)}
                   </Link>
                 </li>
               ))}
@@ -74,7 +76,7 @@ const Footer = () => {
           </div>
           
           <div>
-            <h4 className="font-bold text-lg mb-6 text-blue">Nos services</h4>
+            <h4 className="font-bold text-lg mb-6 text-blue">{t("footer.ourServices")}</h4>
             <ul className="space-y-3">
               {services.map((service, index) => (
                 <li key={index}>
@@ -82,7 +84,7 @@ const Footer = () => {
                     to={service.path} 
                     className="text-muted-foreground hover:text-brown transition-colors"
                   >
-                    {service.name}
+                    {t(service.nameKey)}
                   </Link>
                 </li>
               ))}
@@ -90,7 +92,7 @@ const Footer = () => {
           </div>
           
           <div>
-            <h4 className="font-bold text-lg mb-6 bg-gradient-to-r from-brown to-blue bg-clip-text text-transparent">Contact</h4>
+            <h4 className="font-bold text-lg mb-6 bg-gradient-to-r from-brown to-blue bg-clip-text text-transparent">{t("footer.contact")}</h4>
             <address className="not-italic space-y-3 text-muted-foreground">
             Lot G100Bis Moramanga Ambony<br />
             Moramanga 514, Madagascar
@@ -101,10 +103,10 @@ const Footer = () => {
         </div>
         
         <div className="pt-8 border-t border-border/30 flex flex-col sm:flex-row justify-between items-center text-sm text-muted-foreground">
-          <p>&copy; {currentYear} ConseilPro. Tous droits réservés.</p>
+          <p>&copy; {currentYear} ConseilPro. {t("footer.rights")}</p>
           <div className="flex space-x-6 mt-4 sm:mt-0">
-            <Link to="/privacy" className="hover:text-brown">Politique de confidentialité</Link>
-            <Link to="/terms" className="hover:text-blue">Conditions d'utilisation</Link>
+            <Link to="/privacy" className="hover:text-brown">{t("footer.privacy")}</Link>
+            <Link to="/terms" className="hover:text-blue">{t("footer.terms")}</Link>
           </div>
         </div>
       </div>

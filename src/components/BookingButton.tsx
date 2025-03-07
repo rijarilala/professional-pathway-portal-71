@@ -10,9 +10,11 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 import { useToast } from "@/hooks/use-toast";
+import { useTranslation } from "react-i18next";
 
 const BookingButton = () => {
   const { toast } = useToast();
+  const { t } = useTranslation();
   const [open, setOpen] = useState(false);
   const [selectedService, setSelectedService] = useState("");
   const [selectedDate, setSelectedDate] = useState("");
@@ -44,8 +46,8 @@ const BookingButton = () => {
     // Simulate form submission
     setTimeout(() => {
       toast({
-        title: "Rendez-vous confirmé !",
-        description: `Votre rendez-vous pour ${selectedService} le ${selectedDate} a été confirmé.`,
+        title: t("booking.success"),
+        description: t("booking.confirmation", { service: selectedService, date: selectedDate }),
       });
       setOpen(false);
       // Reset form
@@ -62,17 +64,17 @@ const BookingButton = () => {
       <DialogTrigger asChild>
         <Button className="fixed bottom-6 right-6 z-30 rounded-full shadow-lg px-6 h-14 bg-primary hover:bg-primary/90 flex items-center gap-2">
           <CalendarClock className="h-5 w-5" />
-          <span>Prendre RDV</span>
+          <span>{t("common.appointment")}</span>
         </Button>
       </DialogTrigger>
       <DialogContent className="sm:max-w-md glass-card">
         <DialogHeader>
-          <DialogTitle className="text-2xl font-bold text-center">Réserver un rendez-vous</DialogTitle>
+          <DialogTitle className="text-2xl font-bold text-center">{t("booking.title")}</DialogTitle>
         </DialogHeader>
         <form onSubmit={handleSubmit} className="space-y-4 pt-4">
           <div className="space-y-2">
             <label htmlFor="service" className="text-sm font-medium">
-              Service souhaité
+              {t("booking.service")}
             </label>
             <select
               id="service"
@@ -92,7 +94,7 @@ const BookingButton = () => {
           
           <div className="space-y-2">
             <label htmlFor="date" className="text-sm font-medium">
-              Date et heure
+              {t("booking.dateTime")}
             </label>
             <select
               id="date"
@@ -112,14 +114,14 @@ const BookingButton = () => {
           
           <div className="space-y-2">
             <label htmlFor="name" className="text-sm font-medium">
-              Nom complet
+              {t("booking.fullName")}
             </label>
             <input
               id="name"
               type="text"
               value={name}
               onChange={(e) => setName(e.target.value)}
-              placeholder="Votre nom"
+              placeholder={t("booking.fullName")}
               required
               className="w-full rounded-md border border-input bg-transparent px-3 py-2 text-sm shadow-sm"
             />
@@ -127,7 +129,7 @@ const BookingButton = () => {
           
           <div className="space-y-2">
             <label htmlFor="email" className="text-sm font-medium">
-              Email
+              {t("common.email")}
             </label>
             <input
               id="email"
@@ -142,21 +144,21 @@ const BookingButton = () => {
           
           <div className="space-y-2">
             <label htmlFor="phone" className="text-sm font-medium">
-              Téléphone
+              {t("booking.phone")}
             </label>
             <input
               id="phone"
               type="tel"
               value={phone}
               onChange={(e) => setPhone(e.target.value)}
-              placeholder="Votre numéro de téléphone"
+              placeholder={t("booking.phone")}
               required
               className="w-full rounded-md border border-input bg-transparent px-3 py-2 text-sm shadow-sm"
             />
           </div>
           
           <Button type="submit" className="w-full bg-primary hover:bg-primary/90 text-white mt-4">
-            Confirmer le rendez-vous
+            {t("booking.confirm")}
           </Button>
         </form>
       </DialogContent>

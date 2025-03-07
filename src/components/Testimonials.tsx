@@ -1,6 +1,7 @@
 
 import React, { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
+import { useTranslation } from "react-i18next";
 
 const testimonials = [
   {
@@ -29,6 +30,7 @@ const testimonials = [
 const Testimonials = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
+  const { t } = useTranslation();
 
   useEffect(() => {
     setIsVisible(true);
@@ -48,9 +50,9 @@ const Testimonials = () => {
       
       <div className="max-w-6xl mx-auto">
         <div className="text-center max-w-2xl mx-auto mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">Ce qu'en disent nos clients</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">{t("home.testimonials.title")}</h2>
           <p className="text-lg text-muted-foreground">
-            Découvrez les témoignages de professionnels et d'entreprises qui ont fait confiance à notre expertise.
+            {t("home.testimonials.description")}
           </p>
         </div>
 

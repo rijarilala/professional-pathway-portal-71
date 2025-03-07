@@ -3,9 +3,11 @@ import React, { useEffect, useState } from "react";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import { useTranslation } from "react-i18next";
 
 const Hero = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const { t } = useTranslation();
 
   useEffect(() => {
     setIsVisible(true);
@@ -23,26 +25,33 @@ const Hero = () => {
           <div className={cn("space-y-6", isVisible ? "animate-fadeIn" : "opacity-0")}>
             <div className="inline-flex items-center rounded-full px-3 py-1 text-sm bg-blue-100 text-blue-800 font-medium">
               <span className="animate-pulse mr-1.5 h-2 w-2 rounded-full bg-blue"></span>
-              Cabinet de Conseil Professionnel
+              {t("home.hero.badge")}
             </div>
             
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-              Façonnez l'avenir de votre
-              <span className="bg-gradient-to-r from-brown to-blue bg-clip-text text-transparent"> carrière </span>
-              avec expertise
+              {t("home.hero.title").split(" ").map((word, i, arr) => 
+                i === arr.length - 2 ? (
+                  <React.Fragment key={i}>
+                    <span className="bg-gradient-to-r from-brown to-blue bg-clip-text text-transparent">{word} </span>
+                    {arr[arr.length - 1]}
+                  </React.Fragment>
+                ) : i < arr.length - 2 ? (
+                  <React.Fragment key={i}>{word} </React.Fragment>
+                ) : null
+              )}
             </h1>
             
             <p className="text-lg md:text-xl text-muted-foreground max-w-lg">
-              Nous vous accompagnons dans votre développement professionnel, de l'orientation au recrutement, en passant par la formation et l'immigration.
+              {t("home.hero.description")}
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
               <Button className="bg-brown hover:bg-brown/90 text-white rounded-md h-12 px-6 text-base shadow-md hover:shadow-lg transition-all">
-                Découvrir nos services
+                {t("home.hero.cta")}
                 <ArrowRight size={18} className="ml-2" />
               </Button>
               <Button variant="outline" className="h-12 px-6 text-base border-blue text-blue hover:bg-blue/5">
-                Prendre rendez-vous
+                {t("home.hero.secondaryCta")}
               </Button>
             </div>
             
@@ -55,7 +64,7 @@ const Hero = () => {
                 ))}
               </div>
               <div>
-                <p className="text-sm font-medium">+450 professionnels accompagnés</p>
+                <p className="text-sm font-medium">{t("home.hero.clientCount")}</p>
                 <div className="flex text-yellow-500">
                   {[1, 2, 3, 4, 5].map((i) => (
                     <svg key={i} xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
@@ -77,8 +86,8 @@ const Hero = () => {
                 className="w-full h-auto rounded-xl object-cover"
               />
               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6 text-white">
-                <p className="font-semibold text-sm">Notre approche</p>
-                <h3 className="text-xl font-bold mt-1">Un accompagnement personnalisé et bienveillant</h3>
+                <p className="font-semibold text-sm">{t("home.hero.approachTitle")}</p>
+                <h3 className="text-xl font-bold mt-1">{t("home.hero.approachDesc")}</h3>
               </div>
             </div>
             <div className="absolute -top-4 -left-4 w-24 h-24 bg-brown/20 rounded-full blur-2xl"></div>
