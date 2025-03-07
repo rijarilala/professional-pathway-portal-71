@@ -43,7 +43,7 @@ const Footer = () => {
               </span>
             </Link>
             <p className="text-muted-foreground mb-6">
-              Cabinet de conseil spécialisé en orientation professionnelle, coaching, formation, recrutement et immigration.
+              {t("footer.description")}
             </p>
             <div className="flex space-x-4">
               {socialLinks.map((link, index) => (
