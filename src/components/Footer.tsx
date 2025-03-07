@@ -10,18 +10,18 @@ const Footer = () => {
 
   const quickLinks = [
     { nameKey: "navigation.home", path: "/" },
-    { nameKey: "navigation.services", path: "/#services" },
-    { nameKey: "navigation.about", path: "/#about" },
-    { nameKey: "navigation.blog", path: "/#blog" },
-    { nameKey: "navigation.contact", path: "/#contact" },
+    { nameKey: "navigation.services", path: "/services" },
+    { nameKey: "navigation.about", path: "/about" },
+    { nameKey: "navigation.blog", path: "/blog" },
+    { nameKey: "navigation.contact", path: "/contact" },
   ];
 
   const services = [
-    { nameKey: "services.counseling.title", path: "/#services" },
-    { nameKey: "services.coaching.title", path: "/#services" },
-    { nameKey: "services.training.title", path: "/#services" },
-    { nameKey: "services.recruitment.title", path: "/#services" },
-    { nameKey: "services.immigration.title", path: "/#services" },
+    { nameKey: "services.counseling.title", path: "/services" },
+    { nameKey: "services.coaching.title", path: "/services" },
+    { nameKey: "services.training.title", path: "/services" },
+    { nameKey: "services.recruitment.title", path: "/services" },
+    { nameKey: "services.immigration.title", path: "/services" },
   ];
 
   const socialLinks = [
