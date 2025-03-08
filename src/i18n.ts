@@ -14,7 +14,7 @@ i18n
   // Initialize i18next
   .init({
     fallbackLng: 'fr',
-    debug: process.env.NODE_ENV === 'development',
+    debug: false, // Set to false to avoid console logs in development
     interpolation: {
       escapeValue: false, // not needed for React
     },
@@ -25,6 +25,9 @@ i18n
     },
     backend: {
       loadPath: '/locales/{{lng}}/{{ns}}.json',
+    },
+    react: {
+      useSuspense: true,
     },
   });
 
