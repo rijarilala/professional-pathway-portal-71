@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Link } from "react-router-dom";
 import { Instagram, Twitter, Linkedin, Facebook, Mail } from "lucide-react";
@@ -10,7 +9,7 @@ const Footer = () => {
 
   const quickLinks = [
     { nameKey: "navigation.home", path: "/" },
-    { nameKey: "navigation.services", path: "/services" },
+    { nameKey: "navigation.services", path: "/" },
     { nameKey: "navigation.about", path: "/about" },
     { nameKey: "navigation.blog", path: "/blog" },
     { nameKey: "navigation.contact", path: "/contact" },
@@ -39,7 +38,7 @@ const Footer = () => {
           <div>
             <Link to="/" className="inline-block mb-6">
               <span className="text-2xl font-bold bg-gradient-to-r from-brown to-blue bg-clip-text text-transparent">
-                ConseilPro
+                Great Pathway
               </span>
             </Link>
             <p className="text-muted-foreground mb-6">
@@ -103,7 +102,7 @@ const Footer = () => {
         </div>
         
         <div className="pt-8 border-t border-border/30 flex flex-col sm:flex-row justify-between items-center text-sm text-muted-foreground">
-          <p>&copy; {currentYear} ConseilPro. {t("footer.rights")}</p>
+          <p>&copy; {currentYear} Great Pathway. {t("footer.rights")}</p>
           <div className="flex space-x-6 mt-4 sm:mt-0">
             <Link to="/privacy" className="hover:text-brown">{t("footer.privacy")}</Link>
             <Link to="/terms" className="hover:text-blue">{t("footer.terms")}</Link>

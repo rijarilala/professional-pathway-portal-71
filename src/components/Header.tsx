@@ -39,7 +39,7 @@ const Header = () => {
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <Link to="/" className="flex items-center space-x-2">
           <span className="text-2xl font-bold brown-blue-accent">
-            ConseilPro
+            Great Pathway
           </span>
         </Link>
 
