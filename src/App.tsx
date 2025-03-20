@@ -8,11 +8,13 @@ import Blog from "@/pages/Blog";
 import Contact from "@/pages/Contact";
 import NotFound from "@/pages/NotFound";
 import CounselingService from "@/pages/CounselingService";
+import ScrollToTop from "@/components/ScrollToTop";
 import "./i18n";
 
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Index />} />
         <Route path="/about" element={<About />} />
