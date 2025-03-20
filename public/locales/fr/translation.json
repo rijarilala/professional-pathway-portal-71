@@ -96,15 +96,106 @@
   "services": {
     "title": "Nos Services",
     "description": "Découvrez notre gamme complète de services professionnels adaptés à vos besoins",
+    "viewDetails": "Voir les détails",
+    "bookConsultation": "Prendre rendez-vous",
+    "viewPricing": "Voir les tarifs",
+    "contactTeam": "Contacter notre équipe",
     "counseling": {
       "title": "Conseil et Orientation Professionnelle",
       "description": "Accompagnement personnalisé pour identifier vos compétences et définir votre projet professionnel.",
+      "detailedDescription": "Notre service de conseil professionnel vous aide à clarifier votre orientation de carrière grâce à des évaluations personnalisées, des conseils d'experts et une planification de carrière concrète.",
       "features": [
         "Bilan de compétences",
         "Tests d'orientation",
         "Analyse de marché",
         "Plan d'action personnalisé"
-      ]
+      ],
+      "featuresTitle": "Ce Que Nous Proposons",
+      "featuresDescription": "Notre service complet de conseil professionnel comprend des évaluations spécialisées et un accompagnement personnalisé.",
+      "features": {
+        "assessment": {
+          "title": "Bilan de Compétences",
+          "description": "Évaluation complète de vos compétences, expériences et potentiel pour identifier vos forces et axes de développement."
+        },
+        "tests": {
+          "title": "Tests d'Orientation",
+          "description": "Évaluations scientifiquement validées pour identifier vos intérêts, valeurs et traits de personnalité en adéquation avec les parcours professionnels."
+        },
+        "market": {
+          "title": "Analyse de Marché",
+          "description": "Recherche approfondie sur les tendances du secteur, les conditions du marché de l'emploi et les opportunités correspondant à votre profil."
+        },
+        "plan": {
+          "title": "Plan d'Action",
+          "description": "Une feuille de route détaillée, étape par étape, pour vous aider à atteindre vos objectifs professionnels avec des jalons clairs."
+        }
+      },
+      "processTitle": "Notre Processus",
+      "processDescription": "Nous suivons une approche structurée et centrée sur le client pour vous aider à atteindre vos objectifs de carrière.",
+      "process": {
+        "step1": {
+          "title": "Consultation Initiale",
+          "description": "Nous commençons par une immersion dans votre parcours, vos aspirations et vos contraintes pour comprendre votre situation unique."
+        },
+        "step2": {
+          "title": "Évaluation & Tests",
+          "description": "Grâce à diverses évaluations et outils, nous vous aidons à découvrir vos forces, compétences et préférences."
+        },
+        "step3": {
+          "title": "Analyse & Stratégie",
+          "description": "Nous analysons vos résultats par rapport aux opportunités du marché pour développer une stratégie de carrière adaptée."
+        },
+        "step4": {
+          "title": "Soutien à la Mise en Œuvre",
+          "description": "Nous vous accompagnons dans la mise en œuvre de votre plan d'action, avec des suivis réguliers et des ajustements."
+        }
+      },
+      "pricingTitle": "Investissement dans Votre Avenir",
+      "pricingDescription": "Choisissez le forfait qui correspond le mieux à vos besoins et à votre étape de carrière.",
+      "pricing": {
+        "basic": {
+          "title": "Évaluation de Carrière Basique",
+          "description": "Orientation essentielle pour démarrer votre parcours professionnel",
+          "price": "300 €",
+          "features": [
+            "2 consultations d'une heure",
+            "Évaluation basique des compétences",
+            "Suggestions d'orientation professionnelle",
+            "Support par email pendant 2 semaines"
+          ]
+        },
+        "standard": {
+          "title": "Planification de Carrière Complète",
+          "description": "Notre forfait le plus populaire pour les transitions professionnelles",
+          "price": "750 €",
+          "features": [
+            "5 consultations d'une heure",
+            "Évaluation complète des compétences",
+            "Tests de personnalité et d'aptitude",
+            "Analyse de marché pour 3 industries",
+            "Plan d'action détaillé",
+            "Support par email pendant 2 mois"
+          ]
+        },
+        "premium": {
+          "title": "Transformation de Carrière Executive",
+          "description": "Accompagnement avancé pour les professionnels expérimentés",
+          "price": "1 500 €",
+          "features": [
+            "8 consultations d'une heure",
+            "Évaluation niveau exécutif",
+            "Tests psychométriques avancés",
+            "Recherche de marché personnalisée",
+            "Planification stratégique de carrière",
+            "Stratégie de marque personnelle",
+            "Support illimité par email pendant 6 mois"
+          ]
+        },
+        "popular": "Le Plus Populaire",
+        "selectPlan": "Sélectionner"
+      },
+      "ctaTitle": "Prêt à Transformer Votre Carrière ?",
+      "ctaDescription": "Faites le premier pas vers la réalisation de vos objectifs professionnels en prenant rendez-vous avec l'un de nos conseillers experts en carrière."
     },
     "coaching": {
       "title": "Coaching",

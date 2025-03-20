@@ -1,8 +1,10 @@
 
 import React, { useEffect, useRef } from "react";
-import { Briefcase, Book, Users, Award, GitBranch } from "lucide-react";
+import { Briefcase, Book, Users, Award, GitBranch, ChevronRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
+import { Button } from "./ui/button";
 
 const Services = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -15,6 +17,7 @@ const Services = () => {
       titleKey: "services.counseling.title",
       descriptionKey: "services.counseling.description",
       featuresKey: "services.counseling.features",
+      path: "/services/counseling"
     },
     {
       icon: <Award className="h-10 w-10 text-primary" />,
@@ -93,7 +96,7 @@ const Services = () => {
               <h3 className="text-xl font-bold mb-3">{t(service.titleKey)}</h3>
               <p className="text-muted-foreground mb-6">{t(service.descriptionKey)}</p>
               
-              <ul className="space-y-2">
+              <ul className="space-y-2 mb-6">
                 {t(service.featuresKey, { returnObjects: true }) && 
                   Array.isArray(t(service.featuresKey, { returnObjects: true })) &&
                   (t(service.featuresKey, { returnObjects: true }) as string[]).map((feature: string, idx: number) => (
@@ -106,6 +109,15 @@ const Services = () => {
                   ))
                 }
               </ul>
+              
+              {service.path && (
+                <Link to={service.path}>
+                  <Button variant="outline" className="w-full flex items-center justify-center gap-2 border-primary/30 text-primary hover:bg-primary/10 hover:text-primary">
+                    {t("services.viewDetails")}
+                    <ChevronRight size={16} />
+                  </Button>
+                </Link>
+              )}
             </div>
           ))}
         </div>

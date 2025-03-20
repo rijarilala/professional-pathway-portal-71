@@ -8,7 +8,7 @@ import { componentTagger } from "lovable-tagger";
 export default defineConfig(({ mode }) => ({
   server: {
     host: "localhost",
-    port: 3000,
+    port: 8080,
     open: true, // Automatically open browser on start
   },
   plugins: [
