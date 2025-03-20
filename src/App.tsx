@@ -9,6 +9,7 @@ import Contact from "@/pages/Contact";
 import NotFound from "@/pages/NotFound";
 import CounselingService from "@/pages/CounselingService";
 import ScrollToTop from "@/components/ScrollToTop";
+import ScrollToTopButton from "@/components/ScrollToTopButton";
 import "./i18n";
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
+      <ScrollToTopButton />
     </Router>
   );
 }
