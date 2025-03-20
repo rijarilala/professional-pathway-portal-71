@@ -9,7 +9,7 @@ const Footer = () => {
 
   const quickLinks = [
     { nameKey: "navigation.home", path: "/" },
-    { nameKey: "navigation.services", path: "/" },
+    { nameKey: "navigation.services", path: "/services" },
     { nameKey: "navigation.about", path: "/about" },
     { nameKey: "navigation.blog", path: "/blog" },
     { nameKey: "navigation.contact", path: "/contact" },
