@@ -81,6 +81,17 @@ const Hero = () => {
                 </div>
               </div>
             </div>
+            
+            <div className="mt-6 p-4 bg-blue-50 rounded-lg border border-blue-100">
+              <h3 className="font-bold text-lg text-blue-800">
+                {currentLang === 'fr' ? 'Ouvrez les portes du Canada avec nous' : 'Open the doors to Canada with us'}
+              </h3>
+              <p className="mt-2 text-blue-700">
+                {currentLang === 'fr' ? 
+                  'Que vous souhaitiez étudier, travailler ou vous établir définitivement au Québec ou dans une autre province canadienne, notre équipe est à vos côtés pour transformer votre projet en réalité.' : 
+                  'Whether you wish to study, work, or permanently settle in Quebec or another Canadian province, our team is by your side to turn your project into reality.'}
+              </p>
+            </div>
           </div>
         </div>
         
@@ -92,16 +103,6 @@ const Hero = () => {
                 alt="Professional meeting" 
                 className="w-full h-auto rounded-xl object-cover"
               />
-              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6 text-white">
-                <p className="font-semibold text-sm">
-                  {currentLang === 'fr' ? 'Ouvrez les portes du Canada avec nous' : 'Open the doors to Canada with us'}
-                </p>
-                <h3 className="text-xl font-bold mt-1">
-                  {currentLang === 'fr' ? 
-                    'Que vous souhaitiez étudier, travailler ou vous établir définitivement au Québec ou dans une autre province canadienne, notre équipe est à vos côtés pour transformer votre projet en réalité.' : 
-                    'Whether you wish to study, work, or permanently settle in Quebec or another Canadian province, our team is by your side to turn your project into reality.'}
-                </h3>
-              </div>
             </div>
             <div className="absolute -top-4 -left-4 w-24 h-24 bg-brown/20 rounded-full blur-2xl"></div>
             <div className="absolute -bottom-8 -right-8 w-40 h-40 bg-blue-400/20 rounded-full blur-3xl"></div>
