@@ -14,21 +14,9 @@ const Services = () => {
   // On va générer les services à partir des clés de traduction
   const services = [
     {
-      icon: <GitBranch className="h-10 w-10 text-primary" />,
-      title: currentLang === 'fr' ? "Immigration et résidence permanente" : "Immigration and Permanent Residence",
-      description: currentLang === 'fr' ? "Accompagnement dans vos démarches d'immigration via Entrée Express, PRTQ, PEQ." : "Support in your immigration procedures via Express Entry, PRTQ, PEQ.",
-      features: [
-        currentLang === 'fr' ? "Analyse d'éligibilité" : "Eligibility analysis",
-        currentLang === 'fr' ? "Préparation du dossier" : "File preparation",
-        currentLang === 'fr' ? "Suivi des procédures" : "Procedure monitoring",
-        currentLang === 'fr' ? "Intégration locale" : "Local integration"
-      ],
-      path: "/services/immigration"
-    },
-    {
       icon: <Briefcase className="h-10 w-10 text-primary" />,
-      title: currentLang === 'fr' ? "Orientation professionnelle" : "Professional Guidance",
-      description: currentLang === 'fr' ? "Support personnalisé pour identifier vos compétences et définir votre projet professionnel." : "Personalized support to identify your skills and define your professional project.",
+      title: currentLang === 'fr' ? "Conseil et Orientation Professionnelle" : "Professional Guidance",
+      description: currentLang === 'fr' ? "Accompagnement personnalisé pour identifier vos compétences et définir votre projet professionnel." : "Personalized support to identify your skills and define your professional project.",
       features: [
         currentLang === 'fr' ? "Bilan de compétences" : "Skills assessment",
         currentLang === 'fr' ? "Tests d'orientation" : "Career guidance tests",
@@ -38,26 +26,49 @@ const Services = () => {
       path: "/services/counseling"
     },
     {
-      icon: <GraduationCap className="h-10 w-10 text-primary" />,
-      title: currentLang === 'fr' ? "Accompagnement pour étudiants internationaux" : "Support for International Students",
-      description: currentLang === 'fr' ? "Conseils et assistance pour les études au Canada." : "Advice and assistance for studies in Canada.",
+      icon: <Award className="h-10 w-10 text-primary" />,
+      title: currentLang === 'fr' ? "Coaching" : "Coaching",
+      description: currentLang === 'fr' ? "Développez votre potentiel et atteignez vos objectifs grâce à un coaching sur mesure." : "Develop your potential and achieve your goals through customized coaching.",
       features: [
-        currentLang === 'fr' ? "Choix d'établissement" : "Institution selection",
-        currentLang === 'fr' ? "Demande d'admission" : "Admission application",
-        currentLang === 'fr' ? "Visa étudiant" : "Student visa",
-        currentLang === 'fr' ? "Intégration académique" : "Academic integration"
+        currentLang === 'fr' ? "Développement personnel" : "Personal development",
+        currentLang === 'fr' ? "Leadership" : "Leadership",
+        currentLang === 'fr' ? "Préparation aux entretiens" : "Interview preparation",
+        currentLang === 'fr' ? "Gestion de carrière" : "Career management"
       ],
     },
     {
-      icon: <Flag className="h-10 w-10 text-primary" />,
-      title: currentLang === 'fr' ? "Demande de citoyenneté canadienne" : "Canadian Citizenship Application",
-      description: currentLang === 'fr' ? "Assistance pour l'obtention de la citoyenneté après votre période de résidence permanente." : "Assistance for obtaining citizenship after your permanent residence period.",
+      icon: <Book className="h-10 w-10 text-primary" />,
+      title: currentLang === 'fr' ? "Formation" : "Training",
+      description: currentLang === 'fr' ? "Des formations adaptées aux besoins des professionnels et des entreprises." : "Training courses adapted to the needs of professionals and companies.",
       features: [
-        currentLang === 'fr' ? "Vérification d'éligibilité" : "Eligibility verification",
-        currentLang === 'fr' ? "Préparation du dossier" : "File preparation",
-        currentLang === 'fr' ? "Préparation au test" : "Test preparation",
-        currentLang === 'fr' ? "Assistance à l'entrevue" : "Interview assistance"
+        currentLang === 'fr' ? "Soft skills" : "Soft skills",
+        currentLang === 'fr' ? "Management" : "Management",
+        currentLang === 'fr' ? "Communication" : "Communication",
+        currentLang === 'fr' ? "Marketing digital" : "Digital marketing"
       ],
+    },
+    {
+      icon: <Users className="h-10 w-10 text-primary" />,
+      title: currentLang === 'fr' ? "Recrutement" : "Recruitment",
+      description: currentLang === 'fr' ? "Solution complète pour les entreprises et les candidats en recherche d'emploi." : "Complete solution for companies and job seekers.",
+      features: [
+        currentLang === 'fr' ? "Analyse de poste" : "Job analysis",
+        currentLang === 'fr' ? "Recherche de candidats" : "Candidate search",
+        currentLang === 'fr' ? "Évaluation" : "Assessment",
+        currentLang === 'fr' ? "Intégration" : "Integration"
+      ],
+    },
+    {
+      icon: <GitBranch className="h-10 w-10 text-primary" />,
+      title: currentLang === 'fr' ? "Immigration" : "Immigration",
+      description: currentLang === 'fr' ? "Accompagnement dans vos démarches d'immigration professionnelle." : "Support in your professional immigration procedures.",
+      features: [
+        currentLang === 'fr' ? "Analyse d'éligibilité" : "Eligibility analysis",
+        currentLang === 'fr' ? "Préparation du dossier" : "File preparation",
+        currentLang === 'fr' ? "Suivi des procédures" : "Procedure monitoring",
+        currentLang === 'fr' ? "Intégration locale" : "Local integration"
+      ],
+      path: "/services/immigration"
     },
   ];
   
