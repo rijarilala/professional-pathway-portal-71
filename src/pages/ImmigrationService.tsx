@@ -7,6 +7,7 @@ import { Check, Globe, MapPin, UserCheck, Briefcase, GraduationCap, Search, List
 import BookingButton from "@/components/BookingButton";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import EvaluationButton from "@/components/EvaluationButton";
 
 const ImmigrationService = () => {
   const { t } = useTranslation();
@@ -25,9 +26,7 @@ const ImmigrationService = () => {
                 Il vous permet de vous établir librement dans la province de votre choix, d'y vivre, d'y travailler et d'y étudier en toute sérénité, 
                 tout en ouvrant la voie à la citoyenneté canadienne.
               </p>
-              <Button size="lg" asChild className="mr-4">
-                <Link to="/contact">Évaluer mes options</Link>
-              </Button>
+              <EvaluationButton />
             </div>
           </div>
         </section>
@@ -167,9 +166,7 @@ const ImmigrationService = () => {
                 <Button size="lg" asChild>
                   <Link to="/contact">Prendre rendez-vous</Link>
                 </Button>
-                <Button variant="outline" size="lg" asChild>
-                  <Link to="/services">Découvrir tous nos services</Link>
-                </Button>
+                <EvaluationButton size="lg" variant="outline" className="border-primary/30 text-primary hover:bg-primary/10 hover:text-primary" />
               </div>
             </div>
           </div>

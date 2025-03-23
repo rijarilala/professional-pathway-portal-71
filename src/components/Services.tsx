@@ -153,9 +153,11 @@ const Services = () => {
         </div>
         
         <div className="mt-12 text-center">
-          <Button size="lg" className="bg-brown hover:bg-brown/90 text-white">
-            {currentLang === 'fr' ? "Pré-évaluez votre admissibilité dès aujourd'hui 🚀" : "Pre-evaluate your eligibility today 🚀"}
-          </Button>
+          <Link to="/services/immigration">
+            <Button size="lg" className="bg-brown hover:bg-brown/90 text-white">
+              {currentLang === 'fr' ? "Pré-évaluez votre admissibilité dès aujourd'hui 🚀" : "Pre-evaluate your eligibility today 🚀"}
+            </Button>
+          </Link>
         </div>
       </div>
     </section>
