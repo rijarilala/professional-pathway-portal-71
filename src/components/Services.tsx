@@ -42,6 +42,7 @@ const Services = () => {
       titleKey: "services.immigration.title",
       descriptionKey: "services.immigration.description",
       featuresKey: "services.immigration.features",
+      path: "/services/immigration"
     },
   ];
   

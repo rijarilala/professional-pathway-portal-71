@@ -8,6 +8,7 @@ import Blog from "@/pages/Blog";
 import Contact from "@/pages/Contact";
 import NotFound from "@/pages/NotFound";
 import CounselingService from "@/pages/CounselingService";
+import ImmigrationService from "@/pages/ImmigrationService";
 import ScrollToTop from "@/components/ScrollToTop";
 import ScrollToTopButton from "@/components/ScrollToTopButton";
 import "./i18n";
@@ -21,6 +22,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/services" element={<Services />} />
         <Route path="/services/counseling" element={<CounselingService />} />
+        <Route path="/services/immigration" element={<ImmigrationService />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="*" element={<NotFound />} />
