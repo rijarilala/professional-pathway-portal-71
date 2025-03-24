@@ -5,6 +5,7 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useToast } from "@/hooks/use-toast";
+import { DialogClose } from "@/components/ui/dialog";
 import { ListChecks, FileCheck, Award, Briefcase, GraduationCap, Globe, ChevronRight, ChevronLeft, RefreshCcw } from "lucide-react";
 import {
   Form,
@@ -19,10 +20,10 @@ import { useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 
 interface PreEvaluationFormProps {
-  onClose: () => void;
+  onClose?: () => void;
 }
 
-const PreEvaluationForm: React.FC<PreEvaluationFormProps> = ({ onClose }) => {
+const PreEvaluationForm: React.FC<PreEvaluationFormProps> = ({ onClose = () => {} }) => {
   const { t, i18n } = useTranslation();
   const currentLang = i18n.language;
   const { toast } = useToast();
@@ -78,15 +79,12 @@ const PreEvaluationForm: React.FC<PreEvaluationFormProps> = ({ onClose }) => {
   const calculateResults = () => {
     const data = form.getValues();
     
-    // Calculate scores for different immigration programs
-    // This is a simplified scoring system for demonstration purposes
     let expressEntryScore = 0;
     let pnpScore = 0;
     let quebecScore = 0;
     let businessScore = 0;
     let studyScore = 0;
     
-    // Age scoring
     const age = parseInt(data.age);
     if (age >= 18 && age <= 35) {
       expressEntryScore += 25;
@@ -102,7 +100,6 @@ const PreEvaluationForm: React.FC<PreEvaluationFormProps> = ({ onClose }) => {
       quebecScore += 5;
     }
     
-    // Education scoring
     if (data.education === "phd") {
       expressEntryScore += 25;
       pnpScore += 25;
@@ -125,7 +122,6 @@ const PreEvaluationForm: React.FC<PreEvaluationFormProps> = ({ onClose }) => {
       studyScore += 4;
     }
     
-    // Work experience
     if (data.workExperience === "more5") {
       expressEntryScore += 15;
       pnpScore += 15;
@@ -143,7 +139,6 @@ const PreEvaluationForm: React.FC<PreEvaluationFormProps> = ({ onClose }) => {
       businessScore += 5;
     }
     
-    // Language
     if (data.language === "both") {
       expressEntryScore += 20;
       pnpScore += 15;
@@ -158,7 +153,6 @@ const PreEvaluationForm: React.FC<PreEvaluationFormProps> = ({ onClose }) => {
       quebecScore += 20;
     }
     
-    // Other factors
     if (data.familyInCanada) {
       expressEntryScore += 5;
       pnpScore += 10;
@@ -191,7 +185,6 @@ const PreEvaluationForm: React.FC<PreEvaluationFormProps> = ({ onClose }) => {
       businessScore += 10;
     }
     
-    // Normalize scores to a scale of 0-100
     const normalizeScore = (score: number, maxPossible: number) => 
       Math.min(Math.round((score / maxPossible) * 100), 100);
     
@@ -203,7 +196,6 @@ const PreEvaluationForm: React.FC<PreEvaluationFormProps> = ({ onClose }) => {
       studyPathway: normalizeScore(studyScore, 100),
     });
     
-    // Show toast notification
     toast({
       title: currentLang === 'fr' ? "Évaluation terminée!" : "Evaluation completed!",
       description: currentLang === 'fr' 
@@ -213,7 +205,6 @@ const PreEvaluationForm: React.FC<PreEvaluationFormProps> = ({ onClose }) => {
     });
   };
   
-  // Function to render results with progress bars
   const renderResults = () => {
     if (!results) return null;
     
@@ -310,9 +301,11 @@ const PreEvaluationForm: React.FC<PreEvaluationFormProps> = ({ onClose }) => {
               <RefreshCcw className="h-4 w-4" />
               {currentLang === 'fr' ? "Recommencer l'évaluation" : "Restart Assessment"}
             </Button>
-            <Button onClick={onClose} className="flex items-center gap-2">
-              {currentLang === 'fr' ? "Prendre rendez-vous avec un expert" : "Book with an Expert"}
-            </Button>
+            <DialogClose asChild>
+              <Button onClick={onClose} className="flex items-center gap-2">
+                {currentLang === 'fr' ? "Prendre rendez-vous avec un expert" : "Book with an Expert"}
+              </Button>
+            </DialogClose>
           </div>
         </div>
       </div>
@@ -800,71 +793,70 @@ const PreEvaluationForm: React.FC<PreEvaluationFormProps> = ({ onClose }) => {
   };
 
   return (
-    <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4 overflow-y-auto">
-      <div className="bg-white rounded-lg shadow-lg w-full max-w-2xl max-h-[90vh] overflow-y-auto">
-        <div className="p-6">
-          <div className="flex justify-between items-center mb-6">
-            <h2 className="text-2xl font-bold">
-              {currentLang === 'fr' 
-                ? "Pré-évaluation d'immigration" 
-                : "Immigration Pre-Evaluation"}
-            </h2>
-            <Button variant="ghost" onClick={onClose} className="h-8 w-8 p-0">
-              &times;
-            </Button>
+    <div className="space-y-4">
+      <div className="flex justify-between items-center mb-6">
+        <h2 className="text-2xl font-bold">
+          {currentLang === 'fr' 
+            ? "Pré-évaluation d'immigration" 
+            : "Immigration Pre-Evaluation"}
+        </h2>
+        <DialogClose asChild>
+          <Button variant="ghost" onClick={onClose} className="h-8 w-8 p-0">
+            &times;
+          </Button>
+        </DialogClose>
+      </div>
+      
+      {!results ? (
+        <>
+          <div className="mb-8">
+            <div className="flex justify-between text-sm mb-1">
+              <span>
+                {currentLang === 'fr' ? "Étape" : "Step"} {step}/{totalSteps}
+              </span>
+              <span>{Math.round(progress)}%</span>
+            </div>
+            <Progress value={progress} className="h-2" />
           </div>
           
-          {!results ? (
-            <>
-              <div className="mb-8">
-                <div className="flex justify-between text-sm mb-1">
-                  <span>
-                    {currentLang === 'fr' ? "Étape" : "Step"} {step}/{totalSteps}
-                  </span>
-                  <span>{Math.round(progress)}%</span>
-                </div>
-                <Progress value={progress} className="h-2" />
-              </div>
+          <form>
+            {renderFormStep()}
+            
+            <div className="flex justify-between mt-8">
+              {step > 1 && (
+                <Button 
+                  type="button" 
+                  onClick={goToPreviousStep} 
+                  variant="outline"
+                  className="flex items-center gap-2"
+                >
+                  <ChevronLeft className="h-4 w-4" />
+                  {currentLang === 'fr' ? "Précédent" : "Previous"}
+                </Button>
+              )}
               
-              <form>
-                {renderFormStep()}
-                
-                <div className="flex justify-between mt-8">
-                  {step > 1 && (
-                    <Button 
-                      type="button" 
-                      onClick={goToPreviousStep} 
-                      variant="outline"
-                      className="flex items-center gap-2"
-                    >
-                      <ChevronLeft className="h-4 w-4" />
-                      {currentLang === 'fr' ? "Précédent" : "Previous"}
-                    </Button>
-                  )}
-                  
-                  <div className={step === 1 ? "ml-auto" : ""}>
-                    <Button 
-                      type="button" 
-                      onClick={goToNextStep}
-                      className="flex items-center gap-2"
-                    >
-                      {step < totalSteps 
-                        ? (currentLang === 'fr' ? "Suivant" : "Next") 
-                        : (currentLang === 'fr' ? "Voir mes résultats" : "See my results")
-                      }
-                      {step < totalSteps && <ChevronRight className="h-4 w-4" />}
-                    </Button>
-                  </div>
-                </div>
-              </form>
-            </>
-          ) : (
-            renderResults()
-          )}
-        </div>
-      </div>
+              <div className={step === 1 ? "ml-auto" : ""}>
+                <Button 
+                  type="button" 
+                  onClick={goToNextStep}
+                  className="flex items-center gap-2"
+                >
+                  {step < totalSteps 
+                    ? (currentLang === 'fr' ? "Suivant" : "Next") 
+                    : (currentLang === 'fr' ? "Voir mes résultats" : "See my results")
+                  }
+                  {step < totalSteps && <ChevronRight className="h-4 w-4" />}
+                </Button>
+              </div>
+            </div>
+          </form>
+        </>
+      ) : (
+        renderResults()
+      )}
     </div>
   );
 };
 
 export default PreEvaluationForm;
+
