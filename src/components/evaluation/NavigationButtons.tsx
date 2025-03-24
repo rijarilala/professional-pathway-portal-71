@@ -4,27 +4,23 @@ import { Button } from "@/components/ui/button";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 interface NavigationButtonsProps {
-  step: number;
+  currentStep: number;
   totalSteps: number;
   goToPreviousStep: () => void;
   goToNextStep: () => void;
-  labels: {
-    previous: string;
-    next: string;
-    seeResults: string;
-  };
+  isStepValid: boolean;
 }
 
 const NavigationButtons: React.FC<NavigationButtonsProps> = ({
-  step,
+  currentStep,
   totalSteps,
   goToPreviousStep,
   goToNextStep,
-  labels
+  isStepValid
 }) => {
   return (
     <div className="flex justify-between mt-8">
-      {step > 1 && (
+      {currentStep > 1 && (
         <Button 
           type="button" 
           onClick={goToPreviousStep} 
@@ -32,18 +28,25 @@ const NavigationButtons: React.FC<NavigationButtonsProps> = ({
           className="flex items-center gap-2"
         >
           <ChevronLeft className="h-4 w-4" />
-          {labels.previous}
+          Précédent
         </Button>
       )}
       
-      <div className={step === 1 ? "ml-auto" : ""}>
+      <div className={currentStep === 1 ? "ml-auto" : ""}>
         <Button 
           type="button" 
           onClick={goToNextStep}
           className="flex items-center gap-2"
+          disabled={!isStepValid}
         >
-          {step < totalSteps ? labels.next : labels.seeResults}
-          {step < totalSteps && <ChevronRight className="h-4 w-4" />}
+          {currentStep < totalSteps ? (
+            <>
+              Suivant
+              <ChevronRight className="h-4 w-4" />
+            </>
+          ) : (
+            "Voir les résultats"
+          )}
         </Button>
       </div>
     </div>

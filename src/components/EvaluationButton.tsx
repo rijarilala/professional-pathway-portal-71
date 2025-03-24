@@ -1,7 +1,7 @@
 
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Search } from "lucide-react";
+import { ClipboardCheck } from "lucide-react";
 import { 
   Sheet,
   SheetContent,
@@ -30,11 +30,11 @@ const EvaluationButton: React.FC<EvaluationButtonProps> = ({
           variant={variant}
           className={className}
         >
-          <Search className="mr-2 h-4 w-4" />
-          Pré-évaluer mes options
+          <ClipboardCheck className="mr-2 h-4 w-4" />
+          Évaluer mon éligibilité
         </Button>
       </SheetTrigger>
-      <SheetContent className="w-full sm:max-w-md md:max-w-xl overflow-y-auto">
+      <SheetContent className="w-full sm:max-w-md md:max-w-xl lg:max-w-2xl overflow-y-auto">
         <PreEvaluationForm onClose={() => setIsOpen(false)} />
       </SheetContent>
     </Sheet>

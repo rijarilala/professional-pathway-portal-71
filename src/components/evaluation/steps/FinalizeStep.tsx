@@ -1,4 +1,5 @@
 
+// This component is no longer used in our implementation
 import React from 'react';
 
 interface FinalizeStepProps {

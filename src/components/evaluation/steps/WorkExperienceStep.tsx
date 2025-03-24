@@ -6,20 +6,12 @@ import { UseFormReturn } from 'react-hook-form';
 
 interface WorkExperienceStepProps {
   form: UseFormReturn<any>;
-  title: string;
-  labels: {
-    none: string;
-    lessThanOne: string;
-    oneToThree: string;
-    threeToFive: string;
-    moreThanFive: string;
-  };
 }
 
-const WorkExperienceStep: React.FC<WorkExperienceStepProps> = ({ form, title, labels }) => {
+const WorkExperienceStep: React.FC<WorkExperienceStepProps> = ({ form }) => {
   return (
     <div>
-      <h3 className="text-lg font-medium mb-4">{title}</h3>
+      <h3 className="text-lg font-medium mb-4">Expérience professionnelle (en années)</h3>
       <FormField
         control={form.control}
         name="workExperience"
@@ -34,31 +26,31 @@ const WorkExperienceStep: React.FC<WorkExperienceStepProps> = ({ form, title, la
                 <FormControl>
                   <RadioGroupItem value="none" />
                 </FormControl>
-                <FormLabel className="font-normal">{labels.none}</FormLabel>
+                <FormLabel className="font-normal">Aucune expérience</FormLabel>
               </FormItem>
               <FormItem className="flex items-center space-x-3 space-y-0">
                 <FormControl>
-                  <RadioGroupItem value="less1" />
+                  <RadioGroupItem value="less-than-1" />
                 </FormControl>
-                <FormLabel className="font-normal">{labels.lessThanOne}</FormLabel>
+                <FormLabel className="font-normal">Moins d'un an</FormLabel>
               </FormItem>
               <FormItem className="flex items-center space-x-3 space-y-0">
                 <FormControl>
-                  <RadioGroupItem value="one3" />
+                  <RadioGroupItem value="1-3" />
                 </FormControl>
-                <FormLabel className="font-normal">{labels.oneToThree}</FormLabel>
+                <FormLabel className="font-normal">1 - 3 ans</FormLabel>
               </FormItem>
               <FormItem className="flex items-center space-x-3 space-y-0">
                 <FormControl>
-                  <RadioGroupItem value="three5" />
+                  <RadioGroupItem value="4-5" />
                 </FormControl>
-                <FormLabel className="font-normal">{labels.threeToFive}</FormLabel>
+                <FormLabel className="font-normal">4 - 5 ans</FormLabel>
               </FormItem>
               <FormItem className="flex items-center space-x-3 space-y-0">
                 <FormControl>
-                  <RadioGroupItem value="more5" />
+                  <RadioGroupItem value="5+" />
                 </FormControl>
-                <FormLabel className="font-normal">{labels.moreThanFive}</FormLabel>
+                <FormLabel className="font-normal">Plus de 5 ans</FormLabel>
               </FormItem>
             </RadioGroup>
           </FormItem>

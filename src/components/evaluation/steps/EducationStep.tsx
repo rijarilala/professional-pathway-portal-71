@@ -6,20 +6,12 @@ import { UseFormReturn } from 'react-hook-form';
 
 interface EducationStepProps {
   form: UseFormReturn<any>;
-  title: string;
-  labels: {
-    highSchool: string;
-    diploma: string;
-    bachelors: string;
-    masters: string;
-    phd: string;
-  };
 }
 
-const EducationStep: React.FC<EducationStepProps> = ({ form, title, labels }) => {
+const EducationStep: React.FC<EducationStepProps> = ({ form }) => {
   return (
     <div>
-      <h3 className="text-lg font-medium mb-4">{title}</h3>
+      <h3 className="text-lg font-medium mb-4">Niveau d'études</h3>
       <FormField
         control={form.control}
         name="education"
@@ -32,33 +24,33 @@ const EducationStep: React.FC<EducationStepProps> = ({ form, title, labels }) =>
             >
               <FormItem className="flex items-center space-x-3 space-y-0">
                 <FormControl>
-                  <RadioGroupItem value="highSchool" />
+                  <RadioGroupItem value="none" />
                 </FormControl>
-                <FormLabel className="font-normal">{labels.highSchool}</FormLabel>
+                <FormLabel className="font-normal">Aucun diplôme</FormLabel>
               </FormItem>
               <FormItem className="flex items-center space-x-3 space-y-0">
                 <FormControl>
-                  <RadioGroupItem value="diploma" />
+                  <RadioGroupItem value="highschool" />
                 </FormControl>
-                <FormLabel className="font-normal">{labels.diploma}</FormLabel>
+                <FormLabel className="font-normal">Diplôme d'études secondaires</FormLabel>
               </FormItem>
               <FormItem className="flex items-center space-x-3 space-y-0">
                 <FormControl>
-                  <RadioGroupItem value="bachelors" />
+                  <RadioGroupItem value="college" />
                 </FormControl>
-                <FormLabel className="font-normal">{labels.bachelors}</FormLabel>
+                <FormLabel className="font-normal">Diplôme postsecondaire (Bac+2)</FormLabel>
               </FormItem>
               <FormItem className="flex items-center space-x-3 space-y-0">
                 <FormControl>
-                  <RadioGroupItem value="masters" />
+                  <RadioGroupItem value="bachelor" />
                 </FormControl>
-                <FormLabel className="font-normal">{labels.masters}</FormLabel>
+                <FormLabel className="font-normal">Licence (Bac+3)</FormLabel>
               </FormItem>
               <FormItem className="flex items-center space-x-3 space-y-0">
                 <FormControl>
-                  <RadioGroupItem value="phd" />
+                  <RadioGroupItem value="master-phd" />
                 </FormControl>
-                <FormLabel className="font-normal">{labels.phd}</FormLabel>
+                <FormLabel className="font-normal">Master ou Doctorat</FormLabel>
               </FormItem>
             </RadioGroup>
           </FormItem>

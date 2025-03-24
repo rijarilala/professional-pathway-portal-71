@@ -1,27 +1,24 @@
 
 import React from 'react';
-import { Progress } from "@/components/ui/progress";
 
 interface StepHeaderProps {
-  step: number;
+  currentStep: number;
   totalSteps: number;
-  label: {
-    step: string;
-  };
 }
 
-const StepHeader: React.FC<StepHeaderProps> = ({ step, totalSteps, label }) => {
-  const progress = (step / totalSteps) * 100;
-  
+const StepHeader: React.FC<StepHeaderProps> = ({ currentStep, totalSteps }) => {
   return (
-    <div className="mb-8">
-      <div className="flex justify-between text-sm mb-1">
-        <span>
-          {label.step} {step}/{totalSteps}
-        </span>
-        <span>{Math.round(progress)}%</span>
+    <div className="mb-6">
+      <div className="flex justify-between items-center mb-2">
+        <span className="text-sm font-medium">Étape {currentStep} sur {totalSteps}</span>
+        <span className="text-sm text-muted-foreground">{Math.round((currentStep / totalSteps) * 100)}% complété</span>
       </div>
-      <Progress value={progress} className="h-2" />
+      <div className="w-full bg-gray-200 rounded-full h-2">
+        <div 
+          className="bg-primary h-2 rounded-full transition-all duration-300 ease-in-out" 
+          style={{ width: `${(currentStep / totalSteps) * 100}%` }}
+        />
+      </div>
     </div>
   );
 };
