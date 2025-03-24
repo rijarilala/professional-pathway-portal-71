@@ -1,17 +1,16 @@
-
 import React, { useEffect, useRef } from "react";
 import { Briefcase, Book, Users, Award, GitBranch, GraduationCap, Flag, Map, ChevronRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import { Button } from "./ui/button";
+import EvaluationButton from "./EvaluationButton";
 
 const Services = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
   const { t, i18n } = useTranslation();
   const currentLang = i18n.language;
   
-  // On va générer les services à partir des clés de traduction
   const services = [
     {
       icon: <Briefcase className="h-10 w-10 text-primary" />,
@@ -153,11 +152,7 @@ const Services = () => {
         </div>
         
         <div className="mt-12 text-center">
-          <Link to="/services/immigration">
-            <Button size="lg" className="bg-brown hover:bg-brown/90 text-white">
-              {currentLang === 'fr' ? "Pré-évaluez votre admissibilité dès aujourd'hui 🚀" : "Pre-evaluate your eligibility today 🚀"}
-            </Button>
-          </Link>
+          <EvaluationButton size="lg" className="bg-brown hover:bg-brown/90 text-white" />
         </div>
       </div>
     </section>
