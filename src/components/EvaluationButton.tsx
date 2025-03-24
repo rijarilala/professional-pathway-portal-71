@@ -1,9 +1,13 @@
 
-import React from "react";
+import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Search } from "lucide-react";
 import PreEvaluationForm from "./PreEvaluationForm";
-import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
+import { 
+  Sheet,
+  SheetContent,
+  SheetTrigger
+} from "@/components/ui/sheet";
 
 interface EvaluationButtonProps {
   size?: "default" | "sm" | "lg" | "icon";
@@ -16,9 +20,11 @@ const EvaluationButton: React.FC<EvaluationButtonProps> = ({
   variant = "default", 
   className 
 }) => {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
-    <Dialog>
-      <DialogTrigger asChild>
+    <Sheet open={isOpen} onOpenChange={setIsOpen}>
+      <SheetTrigger asChild>
         <Button 
           size={size} 
           variant={variant}
@@ -27,11 +33,11 @@ const EvaluationButton: React.FC<EvaluationButtonProps> = ({
           <Search className="mr-2 h-4 w-4" />
           Pré-évaluer mes options
         </Button>
-      </DialogTrigger>
-      <DialogContent className="sm:max-w-[600px] max-h-[90vh] overflow-y-auto">
-        <PreEvaluationForm />
-      </DialogContent>
-    </Dialog>
+      </SheetTrigger>
+      <SheetContent className="w-full sm:max-w-md md:max-w-xl overflow-y-auto">
+        <PreEvaluationForm onClose={() => setIsOpen(false)} />
+      </SheetContent>
+    </Sheet>
   );
 };
 

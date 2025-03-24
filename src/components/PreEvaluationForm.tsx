@@ -5,7 +5,6 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useToast } from "@/hooks/use-toast";
-import { DialogClose } from "@/components/ui/dialog";
 import { ListChecks, FileCheck, Award, Briefcase, GraduationCap, Globe, ChevronRight, ChevronLeft, RefreshCcw } from "lucide-react";
 import {
   Form,
@@ -20,10 +19,10 @@ import { useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 
 interface PreEvaluationFormProps {
-  onClose?: () => void;
+  onClose: () => void;
 }
 
-const PreEvaluationForm: React.FC<PreEvaluationFormProps> = ({ onClose = () => {} }) => {
+const PreEvaluationForm: React.FC<PreEvaluationFormProps> = ({ onClose }) => {
   const { t, i18n } = useTranslation();
   const currentLang = i18n.language;
   const { toast } = useToast();
@@ -301,11 +300,9 @@ const PreEvaluationForm: React.FC<PreEvaluationFormProps> = ({ onClose = () => {
               <RefreshCcw className="h-4 w-4" />
               {currentLang === 'fr' ? "Recommencer l'évaluation" : "Restart Assessment"}
             </Button>
-            <DialogClose asChild>
-              <Button onClick={onClose} className="flex items-center gap-2">
-                {currentLang === 'fr' ? "Prendre rendez-vous avec un expert" : "Book with an Expert"}
-              </Button>
-            </DialogClose>
+            <Button onClick={onClose} className="flex items-center gap-2">
+              {currentLang === 'fr' ? "Prendre rendez-vous avec un expert" : "Book with an Expert"}
+            </Button>
           </div>
         </div>
       </div>
@@ -800,11 +797,9 @@ const PreEvaluationForm: React.FC<PreEvaluationFormProps> = ({ onClose = () => {
             ? "Pré-évaluation d'immigration" 
             : "Immigration Pre-Evaluation"}
         </h2>
-        <DialogClose asChild>
-          <Button variant="ghost" onClick={onClose} className="h-8 w-8 p-0">
-            &times;
-          </Button>
-        </DialogClose>
+        <Button variant="ghost" onClick={onClose} className="h-8 w-8 p-0">
+          &times;
+        </Button>
       </div>
       
       {!results ? (
