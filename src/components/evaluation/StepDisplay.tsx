@@ -105,17 +105,17 @@ interface StepDisplayProps {
 const StepDisplay: React.FC<StepDisplayProps> = ({ step, form, language }) => {
   switch (step) {
     case 1:
-      return <AgeStep form={form} title={language.steps.age.title} labels={language.steps.age.labels} />;
+      return <AgeStep form={form} />;
     case 2:
-      return <EducationStep form={form} title={language.steps.education.title} labels={language.steps.education.labels} />;
+      return <EducationStep form={form} />;
     case 3:
-      return <WorkExperienceStep form={form} title={language.steps.workExperience.title} labels={language.steps.workExperience.labels} />;
+      return <WorkExperienceStep form={form} />;
     case 4:
-      return <LanguageStep form={form} title={language.steps.language.title} labels={language.steps.language.labels} />;
+      return <LanguageStep form={form} />;
     case 5:
-      return <AdditionalInfoStep1 form={form} title={language.steps.additionalInfo1.title} labels={language.steps.additionalInfo1.labels} />;
+      return <AdditionalInfoStep1 form={form} />;
     case 6:
-      return <AdditionalInfoStep2 form={form} title={language.steps.additionalInfo2.title} labels={language.steps.additionalInfo2.labels} />;
+      return <AdditionalInfoStep2 form={form} />;
     case 7:
       return <FinalizeStep 
         title={language.steps.finalize.title} 
