@@ -6,10 +6,15 @@ import PreEvaluationForm from "./PreEvaluationForm";
 
 interface EvaluationButtonProps {
   size?: "default" | "sm" | "lg" | "icon";
+  variant?: "default" | "destructive" | "outline" | "secondary" | "ghost" | "link";
   className?: string;
 }
 
-const EvaluationButton: React.FC<EvaluationButtonProps> = ({ size = "lg", className }) => {
+const EvaluationButton: React.FC<EvaluationButtonProps> = ({ 
+  size = "lg", 
+  variant = "default", 
+  className 
+}) => {
   const [showForm, setShowForm] = useState(false);
   
   const openForm = () => {
@@ -24,6 +29,7 @@ const EvaluationButton: React.FC<EvaluationButtonProps> = ({ size = "lg", classN
     <>
       <Button 
         size={size} 
+        variant={variant}
         onClick={openForm}
         className={className}
       >
