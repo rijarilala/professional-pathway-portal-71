@@ -1,5 +1,6 @@
+
 import React, { useEffect, useRef } from "react";
-import { Briefcase, Book, Users, Award, GitBranch, GraduationCap, Flag, Map, ChevronRight } from "lucide-react";
+import { Briefcase, Book, Users, Award, GitBranch, GraduationCap, Flag, Map, ChevronRight, FileText } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
@@ -23,6 +24,18 @@ const Services = () => {
         currentLang === 'fr' ? "Plan d'action personnalisé" : "Personalized action plan"
       ],
       path: "/services/counseling"
+    },
+    {
+      icon: <FileText className="h-10 w-10 text-primary" />,
+      title: currentLang === 'fr' ? "Conception de CV et Lettres de Motivation" : "Resume & Cover Letter Creation",
+      description: currentLang === 'fr' ? "Création de documents professionnels percutants pour maximiser vos chances d'obtenir des entretiens." : "Creation of impactful professional documents to maximize your chances of getting interviews.",
+      features: [
+        currentLang === 'fr' ? "CV personnalisé" : "Customized resume",
+        currentLang === 'fr' ? "Lettre de motivation" : "Cover letter",
+        currentLang === 'fr' ? "Optimisation LinkedIn" : "LinkedIn optimization",
+        currentLang === 'fr' ? "Coaching entretien" : "Interview coaching"
+      ],
+      path: "/services/career-guidance"
     },
     {
       icon: <Award className="h-10 w-10 text-primary" />,

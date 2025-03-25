@@ -1,34 +1,49 @@
 
-import React from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Index from "@/pages/Index";
-import About from "@/pages/About";
-import Services from "@/pages/Services";
-import Blog from "@/pages/Blog";
-import Contact from "@/pages/Contact";
-import NotFound from "@/pages/NotFound";
-import CounselingService from "@/pages/CounselingService";
-import ImmigrationService from "@/pages/ImmigrationService";
+import { Suspense, lazy } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Toaster } from "@/components/ui/toaster";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+
+// Pages
+const Index = lazy(() => import("@/pages/Index"));
+const About = lazy(() => import("@/pages/About"));
+const Contact = lazy(() => import("@/pages/Contact"));
+const Services = lazy(() => import("@/pages/Services"));
+const CounselingService = lazy(() => import("@/pages/CounselingService"));
+const CareerGuidanceService = lazy(() => import("@/pages/CareerGuidanceService"));
+const ImmigrationService = lazy(() => import("@/pages/ImmigrationService"));
+const Blog = lazy(() => import("@/pages/Blog"));
+const NotFound = lazy(() => import("@/pages/NotFound"));
+
+// Components
 import ScrollToTop from "@/components/ScrollToTop";
 import ScrollToTopButton from "@/components/ScrollToTopButton";
-import "./i18n";
+
+// Create a client
+const queryClient = new QueryClient();
 
 function App() {
   return (
-    <Router>
-      <ScrollToTop />
-      <Routes>
-        <Route path="/" element={<Index />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/services" element={<Services />} />
-        <Route path="/services/counseling" element={<CounselingService />} />
-        <Route path="/services/immigration" element={<ImmigrationService />} />
-        <Route path="/blog" element={<Blog />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="*" element={<NotFound />} />
-      </Routes>
-      <ScrollToTopButton />
-    </Router>
+    <QueryClientProvider client={queryClient}>
+      <BrowserRouter>
+        <ScrollToTop />
+        <Suspense fallback={<div className="flex h-screen w-full items-center justify-center">Loading...</div>}>
+          <Routes>
+            <Route path="/" element={<Index />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/services" element={<Services />} />
+            <Route path="/services/counseling" element={<CounselingService />} />
+            <Route path="/services/career-guidance" element={<CareerGuidanceService />} />
+            <Route path="/services/immigration" element={<ImmigrationService />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </Suspense>
+        <ScrollToTopButton />
+        <Toaster />
+      </BrowserRouter>
+    </QueryClientProvider>
   );
 }
 
