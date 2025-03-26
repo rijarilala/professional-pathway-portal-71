@@ -1,47 +1,44 @@
 
+import { Routes, Route } from "react-router-dom";
+import { Toaster } from "@/components/ui/sonner";
 import { Suspense, lazy } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { Toaster } from "@/components/ui/toaster";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-
-// Pages
-const Index = lazy(() => import("@/pages/Index"));
-const About = lazy(() => import("@/pages/About"));
-const Contact = lazy(() => import("@/pages/Contact"));
-const Services = lazy(() => import("@/pages/Services"));
-const CounselingService = lazy(() => import("@/pages/CounselingService"));
-const ImmigrationService = lazy(() => import("@/pages/ImmigrationService"));
-const Blog = lazy(() => import("@/pages/Blog"));
-const NotFound = lazy(() => import("@/pages/NotFound"));
-
-// Components
-import ScrollToTop from "@/components/ScrollToTop";
-import ScrollToTopButton from "@/components/ScrollToTopButton";
-
-// Create a client
-const queryClient = new QueryClient();
+import { useEffect } from "react";
+import Index from "./pages/Index";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
+import Services from "./pages/Services";
+import NotFound from "./pages/NotFound";
+import Blog from "./pages/Blog";
+import ScrollToTop from "./components/ScrollToTop";
+import "./App.css";
+import CounselingService from "./pages/CounselingService";
+import ImmigrationService from "./pages/ImmigrationService";
+import TrainingService from "./pages/TrainingService";
+import CareerGuidanceService from "./pages/CareerGuidanceService";
 
 function App() {
+  useEffect(() => {
+    // For debugging
+    console.log("App mounted");
+  }, []);
+
   return (
-    <QueryClientProvider client={queryClient}>
-      <BrowserRouter>
-        <ScrollToTop />
-        <Suspense fallback={<div className="flex h-screen w-full items-center justify-center">Loading...</div>}>
-          <Routes>
-            <Route path="/" element={<Index />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/services" element={<Services />} />
-            <Route path="/services/counseling" element={<CounselingService />} />
-            <Route path="/services/immigration" element={<ImmigrationService />} />
-            <Route path="/blog" element={<Blog />} />
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-        </Suspense>
-        <ScrollToTopButton />
-        <Toaster />
-      </BrowserRouter>
-    </QueryClientProvider>
+    <>
+      <Toaster position="top-right" />
+      <ScrollToTop />
+      <Routes>
+        <Route path="/" element={<Index />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/services" element={<Services />} />
+        <Route path="/services/counseling" element={<CounselingService />} />
+        <Route path="/services/immigration" element={<ImmigrationService />} />
+        <Route path="/services/training" element={<TrainingService />} />
+        <Route path="/services/career-guidance" element={<CareerGuidanceService />} />
+        <Route path="/blog" element={<Blog />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </>
   );
 }
 

@@ -39,6 +39,7 @@ const Services = () => {
         currentLang === 'fr' ? "Optimisation LinkedIn" : "LinkedIn optimization",
         currentLang === 'fr' ? "Coaching entretien" : "Interview coaching"
       ],
+      path: "/services/training"
     },
     {
       icon: <Award className="h-10 w-10 text-primary" />,
