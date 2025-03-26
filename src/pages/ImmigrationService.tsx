@@ -36,7 +36,7 @@ const ImmigrationService = () => {
             <div className="max-w-4xl mx-auto">
               <h2 className="text-2xl md:text-4xl font-bold mb-6 text-center">Notre expertise à votre service</h2>
               <p className="text-lg text-muted-foreground mb-10 text-center">
-                Que vous envisagiez de vous installer au Québec ou dans une autre province canadienne, 
+                Que vous envisagiez de vous installer au Canada, 
                 notre équipe vous accompagne à chaque étape de votre parcours d'immigration. 
                 De l'évaluation de votre admissibilité à la soumission de votre dossier, 
                 nous vous offrons une prise en charge complète et personnalisée pour maximiser vos chances de succès.
