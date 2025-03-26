@@ -22,7 +22,7 @@ const ImmigrationService = () => {
               <h1 className="text-3xl md:text-5xl font-bold mb-6">Réalisez votre projet d'installation durable au Canada</h1>
               <p className="text-lg text-muted-foreground mb-8">
                 Le statut de résident permanent est une opportunité précieuse pour celles et ceux qui souhaitent bâtir leur avenir au Canada. 
-                Il vous permet de vous établir librement dans la province de votre choix, d'y vivre, d'y travailler et d'y étudier en toute sérénité, 
+                Il vous permet de vous établir librement dans la ville et province de votre choix, d'y vivre, d'y travailler et d'y étudier en toute sérénité, 
                 tout en ouvrant la voie à la citoyenneté canadienne.
               </p>
               <EvaluationButton />
