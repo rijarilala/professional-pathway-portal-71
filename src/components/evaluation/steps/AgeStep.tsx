@@ -6,12 +6,22 @@ import { UseFormReturn } from 'react-hook-form';
 
 interface AgeStepProps {
   form: UseFormReturn<any>;
+  title?: string;
+  labels?: {
+    under18: string;
+    age1825: string;
+    age2635: string;
+    age3645: string;
+    age4655: string;
+    over55: string;
+    years: string;
+  };
 }
 
-const AgeStep: React.FC<AgeStepProps> = ({ form }) => {
+const AgeStep: React.FC<AgeStepProps> = ({ form, title, labels }) => {
   return (
     <div>
-      <h3 className="text-lg font-medium mb-4">Quel est votre âge ?</h3>
+      <h3 className="text-lg font-medium mb-4">{title || "Quel est votre âge ?"}</h3>
       <FormField
         control={form.control}
         name="age"
@@ -26,31 +36,41 @@ const AgeStep: React.FC<AgeStepProps> = ({ form }) => {
                 <FormControl>
                   <RadioGroupItem value="under-18" />
                 </FormControl>
-                <FormLabel className="font-normal">Moins de 18 ans</FormLabel>
+                <FormLabel className="font-normal">
+                  {labels?.under18 || "Moins de 18 ans"}
+                </FormLabel>
               </FormItem>
               <FormItem className="flex items-center space-x-3 space-y-0">
                 <FormControl>
                   <RadioGroupItem value="18-29" />
                 </FormControl>
-                <FormLabel className="font-normal">18 - 29 ans</FormLabel>
+                <FormLabel className="font-normal">
+                  {labels?.age1825 || "18 - 29 ans"}
+                </FormLabel>
               </FormItem>
               <FormItem className="flex items-center space-x-3 space-y-0">
                 <FormControl>
                   <RadioGroupItem value="30-39" />
                 </FormControl>
-                <FormLabel className="font-normal">30 - 39 ans</FormLabel>
+                <FormLabel className="font-normal">
+                  {labels?.age2635 || "30 - 39 ans"}
+                </FormLabel>
               </FormItem>
               <FormItem className="flex items-center space-x-3 space-y-0">
                 <FormControl>
                   <RadioGroupItem value="40-44" />
                 </FormControl>
-                <FormLabel className="font-normal">40 - 44 ans</FormLabel>
+                <FormLabel className="font-normal">
+                  {labels?.age3645 || "40 - 44 ans"}
+                </FormLabel>
               </FormItem>
               <FormItem className="flex items-center space-x-3 space-y-0">
                 <FormControl>
                   <RadioGroupItem value="45+" />
                 </FormControl>
-                <FormLabel className="font-normal">45 ans et plus</FormLabel>
+                <FormLabel className="font-normal">
+                  {labels?.age4655 || "45 ans et plus"}
+                </FormLabel>
               </FormItem>
             </RadioGroup>
           </FormItem>
