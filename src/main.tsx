@@ -1,6 +1,7 @@
 
 import { createRoot } from 'react-dom/client';
 import { Suspense, StrictMode } from 'react';
+import { BrowserRouter } from 'react-router-dom';
 import App from './App.tsx';
 import './i18n';
 import './index.css';
@@ -18,7 +19,9 @@ if (!rootElement) throw new Error('Failed to find the root element');
 createRoot(rootElement).render(
   <StrictMode>
     <Suspense fallback={<Loading />}>
-      <App />
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
     </Suspense>
   </StrictMode>
 );
