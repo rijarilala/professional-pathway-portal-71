@@ -26,16 +26,19 @@ const Services = () => {
       path: "/services/counseling"
     },
     {
-      icon: <FileText className="h-10 w-10 text-primary" />,
-      title: currentLang === 'fr' ? "Conception de CV et Lettres de Motivation" : "Resume & Cover Letter Creation",
-      description: currentLang === 'fr' ? "Création de documents professionnels percutants pour maximiser vos chances d'obtenir des entretiens." : "Creation of impactful professional documents to maximize your chances of getting interviews.",
+      icon: <Book className="h-10 w-10 text-primary" />,
+      title: currentLang === 'fr' ? "Formation" : "Training",
+      description: currentLang === 'fr' ? "Des formations adaptées aux besoins des professionnels et des entreprises." : "Training courses adapted to the needs of professionals and companies.",
       features: [
+        currentLang === 'fr' ? "Soft skills" : "Soft skills",
+        currentLang === 'fr' ? "Management" : "Management",
+        currentLang === 'fr' ? "Communication" : "Communication",
+        currentLang === 'fr' ? "Marketing digital" : "Digital marketing",
         currentLang === 'fr' ? "CV personnalisé" : "Customized resume",
         currentLang === 'fr' ? "Lettre de motivation" : "Cover letter",
         currentLang === 'fr' ? "Optimisation LinkedIn" : "LinkedIn optimization",
         currentLang === 'fr' ? "Coaching entretien" : "Interview coaching"
       ],
-      path: "/services/career-guidance"
     },
     {
       icon: <Award className="h-10 w-10 text-primary" />,
@@ -46,17 +49,6 @@ const Services = () => {
         currentLang === 'fr' ? "Leadership" : "Leadership",
         currentLang === 'fr' ? "Préparation aux entretiens" : "Interview preparation",
         currentLang === 'fr' ? "Gestion de carrière" : "Career management"
-      ],
-    },
-    {
-      icon: <Book className="h-10 w-10 text-primary" />,
-      title: currentLang === 'fr' ? "Formation" : "Training",
-      description: currentLang === 'fr' ? "Des formations adaptées aux besoins des professionnels et des entreprises." : "Training courses adapted to the needs of professionals and companies.",
-      features: [
-        currentLang === 'fr' ? "Soft skills" : "Soft skills",
-        currentLang === 'fr' ? "Management" : "Management",
-        currentLang === 'fr' ? "Communication" : "Communication",
-        currentLang === 'fr' ? "Marketing digital" : "Digital marketing"
       ],
     },
     {

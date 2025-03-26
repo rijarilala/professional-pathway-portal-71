@@ -10,7 +10,6 @@ const About = lazy(() => import("@/pages/About"));
 const Contact = lazy(() => import("@/pages/Contact"));
 const Services = lazy(() => import("@/pages/Services"));
 const CounselingService = lazy(() => import("@/pages/CounselingService"));
-const CareerGuidanceService = lazy(() => import("@/pages/CareerGuidanceService"));
 const ImmigrationService = lazy(() => import("@/pages/ImmigrationService"));
 const Blog = lazy(() => import("@/pages/Blog"));
 const NotFound = lazy(() => import("@/pages/NotFound"));
@@ -34,7 +33,6 @@ function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/services" element={<Services />} />
             <Route path="/services/counseling" element={<CounselingService />} />
-            <Route path="/services/career-guidance" element={<CareerGuidanceService />} />
             <Route path="/services/immigration" element={<ImmigrationService />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="*" element={<NotFound />} />
