@@ -123,8 +123,8 @@ const TrainingService = () => {
                 </h3>
                 <p className="text-gray-600 mb-4">
                   {currentLang === 'fr'
-                    ? 'Apprenez à créer un CV percutant qui attire l'attention des recruteurs et met en valeur vos compétences.'
-                    : 'Learn how to create a compelling resume that grabs recruiters' attention and highlights your skills.'}
+                    ? "Apprenez à créer un CV percutant qui attire l'attention des recruteurs et met en valeur vos compétences."
+                    : "Learn how to create a compelling resume that grabs recruiters' attention and highlights your skills."}
                 </p>
                 <ul className="space-y-2 mb-6">
                   {[
@@ -155,8 +155,8 @@ const TrainingService = () => {
                 </h3>
                 <p className="text-gray-600 mb-4">
                   {currentLang === 'fr'
-                    ? 'Maîtrisez l'art de la lettre de motivation pour vous démarquer et décrocher plus d'entretiens.'
-                    : 'Master the art of cover letter writing to stand out and secure more interviews.'}
+                    ? "Maîtrisez l'art de la lettre de motivation pour vous démarquer et décrocher plus d'entretiens."
+                    : "Master the art of cover letter writing to stand out and secure more interviews."}
                 </p>
                 <ul className="space-y-2 mb-6">
                   {[
@@ -187,13 +187,13 @@ const TrainingService = () => {
                 </h3>
                 <p className="text-gray-600 mb-4">
                   {currentLang === 'fr'
-                    ? 'Développez votre confiance et vos compétences pour réussir vos entretiens d'embauche.'
-                    : 'Develop your confidence and skills to succeed in job interviews.'}
+                    ? "Développez votre confiance et vos compétences pour réussir vos entretiens d'embauche."
+                    : "Develop your confidence and skills to succeed in job interviews."}
                 </p>
                 <ul className="space-y-2 mb-6">
                   {[
                     currentLang === 'fr' ? 'Questions fréquentes' : 'Common questions',
-                    currentLang === 'fr' ? 'Simulation d\'entretien' : 'Interview simulation',
+                    currentLang === 'fr' ? "Simulation d'entretien" : 'Interview simulation',
                     currentLang === 'fr' ? 'Communication non verbale' : 'Non-verbal communication',
                     currentLang === 'fr' ? 'Négociation salariale' : 'Salary negotiation'
                   ].map((feature, index) => (
@@ -244,8 +244,8 @@ const TrainingService = () => {
                       </h3>
                       <p className="text-gray-700">
                         {currentLang === 'fr'
-                          ? 'Nos formateurs sont en contact permanent avec les recruteurs et connaissent les dernières tendances du marché de l'emploi.'
-                          : 'Our trainers are in constant contact with recruiters and know the latest trends in the job market.'}
+                          ? "Nos formateurs sont en contact permanent avec les recruteurs et connaissent les dernières tendances du marché de l'emploi."
+                          : "Our trainers are in constant contact with recruiters and know the latest trends in the job market."}
                       </p>
                     </div>
                   </div>
@@ -262,8 +262,8 @@ const TrainingService = () => {
                       </h3>
                       <p className="text-gray-700">
                         {currentLang === 'fr'
-                          ? 'Chaque formation est adaptée à votre profil, votre secteur d'activité et vos objectifs professionnels spécifiques.'
-                          : 'Each training is adapted to your profile, your industry, and your specific professional goals.'}
+                          ? "Chaque formation est adaptée à votre profil, votre secteur d'activité et vos objectifs professionnels spécifiques."
+                          : "Each training is adapted to your profile, your industry, and your specific professional goals."}
                       </p>
                     </div>
                   </div>
@@ -280,8 +280,8 @@ const TrainingService = () => {
                       </h3>
                       <p className="text-gray-700">
                         {currentLang === 'fr'
-                          ? 'Plus de 80% de nos clients décrochent des entretiens dans le mois suivant leur formation avec nous.'
-                          : 'More than 80% of our clients secure interviews within a month of completing our training programs.'}
+                          ? "Plus de 80% de nos clients décrochent des entretiens dans le mois suivant leur formation avec nous."
+                          : "More than 80% of our clients secure interviews within a month of completing our training programs."}
                       </p>
                     </div>
                   </div>
@@ -325,8 +325,8 @@ const TrainingService = () => {
                 </div>
                 <p className="text-gray-700 italic">
                   {currentLang === 'fr'
-                    ? '"La formation sur l\'optimisation de CV a complètement transformé ma recherche d\'emploi. Après avoir refait mon CV selon les conseils reçus, j\'ai obtenu 3 entretiens en une semaine alors que je cherchais depuis 2 mois sans succès."'
-                    : '"The resume optimization training completely transformed my job search. After redoing my resume according to the advice received, I got 3 interviews in one week when I had been searching for 2 months without success."'}
+                    ? "\"La formation sur l'optimisation de CV a complètement transformé ma recherche d'emploi. Après avoir refait mon CV selon les conseils reçus, j'ai obtenu 3 entretiens en une semaine alors que je cherchais depuis 2 mois sans succès.\""
+                    : "\"The resume optimization training completely transformed my job search. After redoing my resume according to the advice received, I got 3 interviews in one week when I had been searching for 2 months without success.\""}
                 </p>
               </div>
               
@@ -343,8 +343,8 @@ const TrainingService = () => {
                 </div>
                 <p className="text-gray-700 italic">
                   {currentLang === 'fr'
-                    ? '"Les simulations d\'entretien m\'ont aidé à gagner en confiance et à mieux articuler mes compétences. J\'ai réussi à décrocher un poste dans une entreprise de premier plan grâce à ces préparations."'
-                    : '"The interview simulations helped me gain confidence and better articulate my skills. I managed to secure a position at a top company thanks to these preparations."'}
+                    ? "\"Les simulations d'entretien m'ont aidé à gagner en confiance et à mieux articuler mes compétences. J'ai réussi à décrocher un poste dans une entreprise de premier plan grâce à ces préparations.\""
+                    : "\"The interview simulations helped me gain confidence and better articulate my skills. I managed to secure a position at a top company thanks to these preparations.\""}
                 </p>
               </div>
             </div>
@@ -361,8 +361,8 @@ const TrainingService = () => {
             </h2>
             <p className="text-xl text-purple-100 mb-8 max-w-3xl mx-auto">
               {currentLang === 'fr'
-                ? 'Nos formations vous donnent les outils et les compétences dont vous avez besoin pour réussir dans votre recherche d\'emploi.'
-                : 'Our training programs give you the tools and skills you need to succeed in your job search.'}
+                ? "Nos formations vous donnent les outils et les compétences dont vous avez besoin pour réussir dans votre recherche d'emploi."
+                : "Our training programs give you the tools and skills you need to succeed in your job search."}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button className="bg-white text-purple-700 hover:bg-gray-100" size="lg">
