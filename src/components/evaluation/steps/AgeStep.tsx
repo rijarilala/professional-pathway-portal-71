@@ -32,7 +32,6 @@ const AgeStep: React.FC<AgeStepProps> = ({ form, title, labels }) => {
               defaultValue={field.value}
               className="space-y-3"
             >
-              
               <FormItem className="flex items-center space-x-3 space-y-0">
                 <FormControl>
                   <RadioGroupItem value="18-29" />
